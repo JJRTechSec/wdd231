@@ -1,24 +1,29 @@
 :root {
   --color-one: #163d96;
-  --color-two: #ffffff;
+  --color-two: #f8f1f1;
   --color-three: #4F46A3;
   --color-four: #a5a5a5;
   --color-five: #0033ab;
+  --color-six: #000000;
+  --font-one: Arial;
 }
 
 * {
   box-sizing: border-box;
-  font-family: Arial;
-}
-
-body {
-  min-height: 100vh;
+  font-family: var(--font-one);
 }
 
 html,
 body {
   margin: 0;
   height: 100%;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
@@ -33,7 +38,7 @@ header {
   column-gap: 8px;
   align-items: end;
   padding: 5px 0px 5px 10px;
-  border-bottom: 1px solid #ffffff;
+  background-color: var(--color-two);
 }
 
 .hamburger {
@@ -95,7 +100,7 @@ nav.show {
 
 .navigation li:not(.current) a:hover {
   background-color: var(--color-four);
-  color: var(--color-five);
+  color: var(--color-six);
 }
 
 /***************** MAIN ********************/
@@ -112,6 +117,7 @@ h2 {
   text-align: center;
   background-color: var(--color-four);
   width: 100%;
+  padding: 0.25em 0;
 }
 
 section {
@@ -127,9 +133,32 @@ section p {
   text-align: left;
 }
 
-section img {
-  width: 75%;
+.section1,
+.section2 {
+  background-color: var(--color-three);
+  color: var(--color-two);
+}
 
+.section1 {
+  margin-bottom: 2em;
+}
+
+.section1 h2,
+.section2 h2 {
+  margin-bottom: 0;
+  color: var(--color-six);
+  margin: 0;
+}
+
+.section2 div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section img {
+  width: 100%;
 }
 
 .section3 {
@@ -169,24 +198,37 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 1px solid black;
   width: 100%;
   text-align: center;
 }
 
-footer div {
+.footer-social {
   display: flex;
   justify-content: space-around;
-  border: 1px solid red;
   width: 75%;
 }
 
 .social-media-link {
-  border: 1px solid lime;
   width: 44px;
 }
 
 .social-media-icon {
   width: 100%;
   height: 100%;
+}
+
+.footer-social {
+  width: 50%;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1em;
+  background-color: var(--color-three);
+  color: var(--color-two);
+  width: 100%;
+  text-wrap: wrap;
 }

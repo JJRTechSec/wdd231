@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
   </head>
   <body>
     <header>
-      <img src="./images/computerlogo.svg" alt="Logo/branding for Joseph Jameson-Rickard" width="24px" height="24px" class="logo">
+      <img src="./images/computerlogo.svg" alt="Logo consisting of a blue, purple and grey computer" width="24px" height="24px" class="logo">
       <span>Joseph Jameson-Rickard</span>
       <button id="nav-button" class="hamburger" aria-label="navigation"></button>
     </header>
@@ -32,13 +32,17 @@
     </nav>
     <main>
       <h1>Home</h1>
-      <section>
+      <section class="section1">
         <h2>About Me</h2>
-        <p>I am a student.</p>
+        <p>Hi! I'm Joseph, and I am a Web and Software Development student at BYU-Idaho/BYU Pathway. I started learning to code towards the end of my Bachelor's degree in Sports Therapy and Rehabilitation because I knew that I would not be able to use my degree as I was moving to a new country that didn't accept it. I enjoy solving problems, and if you've tried designing a webpage or doing any form of programming, you know that there is ALWAYS a problem to solve. I hope to continue developing my skills and mastering the foundational work so that it just continues to get easier and quicker.<br>
+        Please feel free to check out my Chamber of Commerce project, and also my final project linked in the navigation bar above.
+        </p>
       </section>
-      <section>
+      <section class="section2">
         <h2>Student Photo</h2>
-        <img id="author-img" src="./images/authorimg.webp" alt="Image of Joseph Jameson-Rickard" width="320" height="214">
+        <div>
+          <img id="author-img" src="./images/authorimg.webp" alt="Image of Joseph Jameson-Rickard" width="320" height="214">
+        </div>
       </section>
       <Section class="section3">
         <h2>Web Certificate Courses</h2>
@@ -51,19 +55,21 @@
       </Section>
     </main>
     <footer>
-      <div>
+      <div class="footer-social">
         <a href="https://www.linkedin.com/in/joseph-jameson-rickard-1534803a6/" class="social-media-link" target="_blank">
-          <img src="./images/linkedin-icon.svg" class="social-media-icon">
+          <img src="./images/linkedin-icon.svg" class="social-media-icon" alt="Link to Joseph's LinkedIn profile">
         </a>
         <a href="https://github.com/JJRTechSec/wdd231" class="social-media-link" target="_blank">
-          <img src="./images/github-icon.svg" class="social-media-icon">
+          <img src="./images/github-icon.svg" class="social-media-icon" alt="Link to Joseph's GitHub repository for WDD231 course">
         </a>
         <a href="https://www.facebook.com/" class="social-media-link" target="_blank">
-          <img src="./images/facebook-icon.svg" class="social-media-icon">
+          <img src="./images/facebook-icon.svg" class="social-media-icon" alt="Link to Facebook page">
         </a>
       </div>
-      <p>&copy<span id="currentYear"></span> - Joseph Jameson-Rickard, Norway</p>
-      <p id="lastModified" class="last-modified"></p>
+      <div class="footer-info">
+        <p>&copy<span id="currentYear"></span> - Joseph Jameson-Rickard, Norway</p>
+        <p id="lastModified" class="last-modified"></p>
+      </div>
     </footer>
   </body>
 </html>
