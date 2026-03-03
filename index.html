@@ -10,30 +10,60 @@
     <!-- CSS FILES -->
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/homepage.css">
+    <link rel="stylesheet" href="./styles/homepage-medium.css">
     <link rel="stylesheet" href="./styles/homepage-large.css">
 
     <!-- SCRIPTS -->
     <script src="./scripts/homepage.js" defer></script>
+    <script src="./scripts/get-dates.js" defer></script>
   </head>
   <body>
     <header>
-      <img src="./images/logo.svg" alt="Logo/branding for Joseph Jameson-Rickard" width="24px" height="24px" class="logo">
+      <img src="./images/computerlogo.svg" alt="Logo/branding for Joseph Jameson-Rickard" width="24px" height="24px" class="logo">
       <span>Joseph Jameson-Rickard</span>
       <button id="nav-button" class="hamburger" aria-label="navigation"></button>
     </header>
     <nav id="nav-bar" class="navigation">
       <ul>
         <li class="navlink"><a href="./index.html">Home</a></li>
-        <li class="navlink current"><a href="#">Chamber</a></li>
+        <li class="navlink current"><a href="#">Chamber Project</a></li>
         <li class="navlink"><a href="#">Final Project</a></li>
       </ul>
     </nav>
     <main>
       <h1>Home</h1>
-      <section></section>
-      <section></section>
-      <Section></Section>
+      <section>
+        <h2>About Me</h2>
+        <p>I am a student.</p>
+      </section>
+      <section>
+        <h2>Student Photo</h2>
+        <img id="author-img" src="./images/authorimg.webp" alt="Image of Joseph Jameson-Rickard" width="320" height="214">
+      </section>
+      <Section class="section3">
+        <h2>Web Certificate Courses</h2>
+        <div>
+          <button id="selectAllCoursesBtn">All</button>
+          <button id="selectCseCoursesBtn">CSE</button>
+          <button id="selectWddCoursesBtn">WDD</button>
+        </div>
+        <p>The total credits for courses listed above is <span id="totalCredits"></span></p>
+      </Section>
     </main>
-    <footer></footer>
+    <footer>
+      <div>
+        <a href="https://www.linkedin.com/in/joseph-jameson-rickard-1534803a6/" class="social-media-link" target="_blank">
+          <img src="./images/linkedin-icon.svg" class="social-media-icon">
+        </a>
+        <a href="https://github.com/JJRTechSec/wdd231" class="social-media-link" target="_blank">
+          <img src="./images/github-icon.svg" class="social-media-icon">
+        </a>
+        <a href="https://www.facebook.com/" class="social-media-link" target="_blank">
+          <img src="./images/facebook-icon.svg" class="social-media-icon">
+        </a>
+      </div>
+      <p>&copy<span id="currentYear"></span> - Joseph Jameson-Rickard, Norway</p>
+      <p id="lastModified" class="last-modified"></p>
+    </footer>
   </body>
 </html>

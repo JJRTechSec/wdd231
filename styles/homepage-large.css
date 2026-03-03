@@ -1,16 +1,26 @@
 @media only screen and (min-width: 38rem) {
   header,
   main,
-  nav, footer {
-    max-width: 900px;
+  nav,
+  footer {
     margin: 0 auto;
+    padding: 10px;
   }
 
   header {
-    grid-template-columns: 24px auto auto;
+    grid-template-columns: 50px auto auto;
     align-items: center;
-    border: 1px solid;
-    padding: 0;
+    border-bottom: 1px solid var(--color-five);
+    height: 4rem;
+  }
+
+  .logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  header span {
+    font-size: 2em;
   }
 
   .hamburger {
@@ -19,13 +29,10 @@
 
   .navigation {
     display: block;
-    left: 0;
-    top: 1.5em;
+    position: static;
     border: none;
-  }
-
-  .navigation li:nth-child(1) {
-    text-align: left;
+    margin-top: -0.65em;
+    margin-left: -10px;
   }
 
   .navigation ul {
