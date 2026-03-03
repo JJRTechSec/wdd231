@@ -1,6 +1,31 @@
+:root {
+  --color-one: #163d96;
+  --color-two: #ffffff;
+  --color-three: #4F46A3;
+  --color-four: #a5a5a5;
+  --color-five: #0033ab;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Arial;
+}
+
 header {
   display: grid;
   grid-template-columns: 24px auto 44px;
+  column-gap: 8px;
+  align-items: end;
+  padding: 5px 0px 5px 10px;
+  border-bottom: 1px solid #ffffff;
+}
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  font-size: 1.25em;
+  cursor: pointer;
+  position: relative;
 }
 
 .hamburger::before {
@@ -9,4 +34,47 @@ header {
 
 .hamburger.show::before {
   content: "\00D7";
+}
+
+nav {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 2em;
+  align-items: center;
+  border: 1px solid var(--color-three);
+  border-bottom: none;
+}
+
+nav.show {
+  display: block;
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation ul {
+  list-style: none;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation a {
+  display: block;
+  text-decoration: none;
+  padding: 0.8em 10px;
+  color: var(--color-one);
+  border-bottom: 1px solid var(--color-three);
+  width: 100%;
+}
+
+.navigation li.current a {
+  background-color: var(--color-three);
+  color: var(--color-two);
+}
+
+.navigation li a:hover {
+  background-color: var(--color-four);
+  color: var(--color-five);
 }
