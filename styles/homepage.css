@@ -100,7 +100,7 @@ nav.show {
 
 .navigation li:not(.current) a:hover {
   background-color: var(--color-four);
-  color: var(--color-six);
+  color: var(--color-five);
 }
 
 /***************** MAIN ********************/

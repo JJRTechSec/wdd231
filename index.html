@@ -16,8 +16,10 @@
     <!-- SCRIPTS -->
     <script src="./scripts/homepage.js" defer></script>
     <script src="./scripts/get-dates.js" defer></script>
+    <script src="./scripts/courses.js" defer></script>
   </head>
   <body>
+    <!------------ HEADER ------------->
     <header>
       <img src="./images/computerlogo.svg" alt="Logo consisting of a blue, purple and grey computer" width="24px" height="24px" class="logo">
       <span>Joseph Jameson-Rickard</span>
@@ -25,11 +27,12 @@
     </header>
     <nav id="nav-bar" class="navigation">
       <ul>
-        <li class="navlink"><a href="./index.html">Home</a></li>
-        <li class="navlink current"><a href="#">Chamber Project</a></li>
-        <li class="navlink"><a href="#">Final Project</a></li>
+        <li id="homeBtn" class="navlink current"><a href="./index.html">Home</a></li>
+        <li id="chamberBtn" class="navlink"><a href="#">Chamber Project</a></li>
+        <li id="finalBtn" class="navlink"><a href="#">Final Project</a></li>
       </ul>
     </nav>
+    <!---------- MAIN ------------>
     <main>
       <h1>Home</h1>
       <section class="section1">
@@ -47,13 +50,15 @@
       <Section class="section3">
         <h2>Web Certificate Courses</h2>
         <div>
-          <button id="selectAllCoursesBtn">All</button>
-          <button id="selectCseCoursesBtn">CSE</button>
-          <button id="selectWddCoursesBtn">WDD</button>
+          <button id="selectAllBtn" class="active-courses">All</button>
+          <button id="selectCseBtn">CSE</button>
+          <button id="selectWddBtn">WDD</button>
         </div>
+        <div id="course-list" class="course-list-section"></div>
         <p>The total credits for courses listed above is <span id="totalCredits"></span></p>
       </Section>
     </main>
+    <!--------- FOOTER ---------->
     <footer>
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/joseph-jameson-rickard-1534803a6/" class="social-media-link" target="_blank">
