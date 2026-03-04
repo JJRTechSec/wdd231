@@ -2,6 +2,7 @@ const courseList = document.querySelector('#course-list');
 const allCoursesButton = document.querySelector('#selectAllBtn');
 const cseCoursesButton = document.querySelector('#selectCseBtn');
 const wddCoursesButton = document.querySelector('#selectWddBtn');
+const displayTotalCredits = document.querySelector('#totalCredits');
 
 const courses = [
   {
@@ -183,5 +184,32 @@ function generateCourseList() {
         courseList.append(generatedCourse);
       }
     })
+  }
+};
+
+function calculateCredits() {
+  let totalCredits = 0;
+  if (allCoursesButton.classList.contains('active-courses')) {
+    courses.forEach(function (course) {
+      totalCredits = course.credits;
+      totalCredits += course.credits;
+      return totalCredits;
+    })
+  } else if (cseCoursesButton.classList.contains('active-courses')) {
+    courses.forEach(function (course) {
+      if (course.subject === 'CSE') {
+        totalCredits = course.credits;
+        totalCredits += course.credits;
+        return totalCredits;
+      }
+    })
+  } else if (wddCoursesButton.classList.contains('active-courses')) {
+    courses.forEach(function (course) {
+      if (course.subject === 'WDD') {
+        totalCredits = course.credits;
+        totalCredits += course.credits;
+        return totalCredits;
+      }
+    });
   }
 };
