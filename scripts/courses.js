@@ -95,8 +95,9 @@ courses.forEach(function (course) {
   }
 });
 
-courseList.innerHTML = '';
+//courseList.innerHTML = '';
 generateCourseList();
+displayTotalCredits.textContent = `${calculateCredits()}`;
 
 
 /****************************** TOGGLE BUTTONS **********************************/
@@ -111,6 +112,7 @@ allCoursesButton.addEventListener('click', () => {
     allCoursesButton.classList.toggle('active-courses');
   }
   generateCourseList();
+  displayTotalCredits.textContent = `${calculateCredits()}`;
 });
 
 cseCoursesButton.addEventListener('click', () => {
@@ -124,6 +126,7 @@ cseCoursesButton.addEventListener('click', () => {
     cseCoursesButton.classList.toggle('active-courses');
   }
   generateCourseList();
+  displayTotalCredits.textContent = `${calculateCredits()}`;
 });
 
 wddCoursesButton.addEventListener('click', () => {
@@ -137,6 +140,7 @@ wddCoursesButton.addEventListener('click', () => {
     wddCoursesButton.classList.toggle('active-courses');
   }
   generateCourseList();
+  displayTotalCredits.textContent = `${calculateCredits()}`;
 });
 
 /*********************************** ADD COURSES TO PAGE ************************************/
@@ -187,29 +191,37 @@ function generateCourseList() {
   }
 };
 
+/******************************* CALCULATE CREDITS *******************************/
+/*
+1 - set total credits to 0
+2 - check which button has active-courses
+3 - filter through courses for specific subject
+4 - total credits += course.credits
+5 - return totalCredits
+6 - display totalCredits
+*/
+
 function calculateCredits() {
   let totalCredits = 0;
   if (allCoursesButton.classList.contains('active-courses')) {
     courses.forEach(function (course) {
-      totalCredits = course.credits;
       totalCredits += course.credits;
-      return totalCredits;
+      //return totalCredits;
     })
   } else if (cseCoursesButton.classList.contains('active-courses')) {
     courses.forEach(function (course) {
       if (course.subject === 'CSE') {
-        totalCredits = course.credits;
         totalCredits += course.credits;
-        return totalCredits;
+        //return totalCredits;
       }
     })
   } else if (wddCoursesButton.classList.contains('active-courses')) {
     courses.forEach(function (course) {
       if (course.subject === 'WDD') {
-        totalCredits = course.credits;
         totalCredits += course.credits;
-        return totalCredits;
+        //return totalCredits;
       }
-    });
+    })
   }
+  return totalCredits;
 };
