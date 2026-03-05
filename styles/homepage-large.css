@@ -111,6 +111,16 @@
     font-size: 1em;
   }
 
+  .course-list-section {
+    grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+    align-items: center;
+    justify-items: center;
+  }
+
+  .course {
+    width: 10em;
+  }
+
   .footer-social {
     width: 15%;
   }

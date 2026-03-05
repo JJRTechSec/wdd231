@@ -172,7 +172,7 @@ section img {
   width: 100%;
 }
 
-.section3 div {
+.section3 .course-buttons {
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -189,6 +189,29 @@ section button {
 .section3 p {
   text-align: center;
   font-size: 0.8em;
+}
+
+.course-list-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25%, 1fr));
+  column-gap: 1em;
+  row-gap: 1em;
+  padding: 0 1em;
+  width: 100%;
+}
+
+.section3 .course {
+  border-radius: 8px;
+}
+
+.cse-course {
+  background-color: var(--color-five);
+  color: var(--color-two);
+}
+
+.wdd-course {
+  background-color: var(--color-four);
+  color: var(--color-six);
 }
 
 /***************** FOOTER ********************/

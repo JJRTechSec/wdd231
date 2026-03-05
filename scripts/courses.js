@@ -157,13 +157,20 @@ function generateCourseList() {
   while (courseList.firstChild) {
     courseList.removeChild(courseList.firstChild);
   };
+  let generatedCourse = document.createElement('p');
   if (allCoursesButton.classList.contains('active-courses')) {
     courses.forEach(function (course) {
       let courseName = course.subject;
       let courseNumber = course.number;
       let courseInfo = `${courseName} ${courseNumber}`;
-      let generatedCourse = document.createElement('p');
+      generatedCourse = document.createElement('p');
+      generatedCourse.classList.add('course');
       generatedCourse.innerHTML = courseInfo;
+      if (courseName === 'CSE') {
+        generatedCourse.classList.add('cse-course');
+      } else if (courseName === 'WDD') {
+        generatedCourse.classList.add('wdd-course');
+      };
       courseList.append(generatedCourse);
     })
   } else if (cseCoursesButton.classList.contains('active-courses')) {
@@ -172,7 +179,8 @@ function generateCourseList() {
         let courseName = course.subject;
         let courseNumber = course.number;
         let courseInfo = `${courseName} ${courseNumber}`;
-        let generatedCourse = document.createElement('p');
+        generatedCourse = document.createElement('p');
+        generatedCourse.classList.add('cse-course', 'course');
         generatedCourse.innerHTML = courseInfo;
         courseList.append(generatedCourse);
       }
@@ -183,7 +191,8 @@ function generateCourseList() {
         let courseName = course.subject;
         let courseNumber = course.number;
         let courseInfo = `${courseName} ${courseNumber}`;
-        let generatedCourse = document.createElement('p');
+        generatedCourse = document.createElement('p');
+        generatedCourse.classList.add('wdd-course', 'course');
         generatedCourse.innerHTML = courseInfo;
         courseList.append(generatedCourse);
       }
