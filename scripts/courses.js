@@ -97,7 +97,7 @@ courses.forEach(function (course) {
 
 //courseList.innerHTML = '';
 generateCourseList();
-displayTotalCredits.textContent = `${calculateCredits()}`;
+displayTotalCredits.textContent = calculateCredits(allCoursesButton);
 
 
 /****************************** TOGGLE BUTTONS **********************************/
@@ -112,7 +112,7 @@ allCoursesButton.addEventListener('click', () => {
     allCoursesButton.classList.toggle('active-courses');
   }
   generateCourseList();
-  displayTotalCredits.textContent = `${calculateCredits()}`;
+  displayTotalCredits.textContent = calculateCredits(allCoursesButton);
 });
 
 cseCoursesButton.addEventListener('click', () => {
@@ -126,7 +126,7 @@ cseCoursesButton.addEventListener('click', () => {
     cseCoursesButton.classList.toggle('active-courses');
   }
   generateCourseList();
-  displayTotalCredits.textContent = `${calculateCredits()}`;
+  displayTotalCredits.textContent = calculateCredits(cseCoursesButton);
 });
 
 wddCoursesButton.addEventListener('click', () => {
@@ -140,7 +140,7 @@ wddCoursesButton.addEventListener('click', () => {
     wddCoursesButton.classList.toggle('active-courses');
   }
   generateCourseList();
-  displayTotalCredits.textContent = `${calculateCredits()}`;
+  displayTotalCredits.textContent = calculateCredits(wddCoursesButton);
 });
 
 /*********************************** ADD COURSES TO PAGE ************************************/
@@ -197,6 +197,7 @@ function generateCourseList() {
         courseList.append(generatedCourse);
       }
     })
+    calculateCredits(wddCoursesButton);
   }
 };
 
@@ -208,29 +209,21 @@ function generateCourseList() {
 4 - total credits += course.credits
 5 - return totalCredits
 6 - display totalCredits
-*/
+*
 
-function calculateCredits() {
-  let totalCredits = 0;
-  if (allCoursesButton.classList.contains('active-courses')) {
-    courses.forEach(function (course) {
-      totalCredits += course.credits;
-      //return totalCredits;
-    })
-  } else if (cseCoursesButton.classList.contains('active-courses')) {
-    courses.forEach(function (course) {
-      if (course.subject === 'CSE') {
-        totalCredits += course.credits;
-        //return totalCredits;
-      }
-    })
-  } else if (wddCoursesButton.classList.contains('active-courses')) {
-    courses.forEach(function (course) {
-      if (course.subject === 'WDD') {
-        totalCredits += course.credits;
-        //return totalCredits;
-      }
-    })
-  }
+/* ARRAY.REDUCE */
+function calculateCredits(button) {
+  const totalCredits = courses.reduce((total, courseModule) => {
+    if (button.id === 'selectAllBtn') {
+      return total + courseModule.credits;
+    }
+    if (button.id === 'selectCseBtn' && courseModule.subject === 'CSE') {
+      return total + courseModule.credits;
+    }
+    if (button.id === 'selectWddBtn' && courseModule.subject === 'WDD') {
+      return total + courseModule.credits;
+    }
+    return total;
+  }, 0);
   return totalCredits;
-};
+}
