@@ -7,26 +7,26 @@
     <meta name="description" content="WDD 231 - Home page for Joseph Jameson-Rickard in this wdd231 course (web frontend development I) with information about him and also links to his chamber of commerce and individual final projects">
     <meta name="author" content="Joseph Jameson-Rickard">
 
-    <!----------- FONTS ------------->
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
-    <!---------- CSS FILES ---------->
+    <!-- CSS FILES -->
     <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/homepage.css">
     <link rel="stylesheet" href="./styles/homepage-medium.css">
     <link rel="stylesheet" href="./styles/homepage-large.css">
 
-    <!---------- SCRIPTS ------------>
+    <!-- SCRIPTS -->
     <script src="./scripts/homepage.js" defer></script>
     <script src="./scripts/get-dates.js" defer></script>
     <script src="./scripts/courses.js" defer></script>
   </head>
   <body>
-    <!------------ HEADER ------------->
+    <!-- HEADER -->
     <header>
-      <img src="./images/computerlogo.svg" alt="Logo consisting of a blue, purple and grey computer" width="24px" height="24px" class="logo">
+      <img src="./images/computerlogo.svg" alt="Logo consisting of a blue, purple and grey computer" width="24" height="24" class="logo">
       <span>Joseph Jameson-Rickard</span>
       <button id="nav-button" class="hamburger" aria-label="navigation"></button>
     </header>
@@ -37,7 +37,7 @@
         <li id="finalBtn" class="navlink"><a href="#">Final Project</a></li>
       </ul>
     </nav>
-    <!---------- MAIN ------------>
+    <!-- MAIN -->
     <main>
       <h1>Home</h1>
       <section class="section1">
@@ -49,7 +49,7 @@
       <section class="section2">
         <h2>Student Photo</h2>
         <div>
-          <img id="author-img" src="./images/authorimg.webp" alt="Image of Joseph Jameson-Rickard" width="320" height="214">
+          <img id="author-img" src="./images/authorimg.webp" alt="Image of Joseph Jameson-Rickard, the author of this site" width="320" height="214">
         </div>
       </section>
       <Section class="section3">
@@ -63,7 +63,7 @@
         <p>The total credits for courses listed above is <span id="totalCredits"></span></p>
       </Section>
     </main>
-    <!--------- FOOTER ---------->
+    <!-- FOOTER -->
     <footer>
       <div class="footer-social">
         <a href="https://www.linkedin.com/in/joseph-jameson-rickard-1534803a6/" class="social-media-link" target="_blank">
@@ -77,7 +77,7 @@
         </a>
       </div>
       <div class="footer-info">
-        <p>&copy<span id="currentYear"></span> - Joseph Jameson-Rickard, Norway</p>
+        <p>&#169<span id="currentYear"></span> - Joseph Jameson-Rickard, Norway</p>
         <p id="lastModified" class="last-modified"></p>
       </div>
     </footer>
