@@ -205,14 +205,15 @@ section button {
   border-radius: 8px;
 }
 
-.cse-course {
+.completed-course {
   background-color: var(--color-five);
   color: var(--color-two);
 }
 
-.wdd-course {
+.non-completed-course {
   background-color: var(--color-four);
   color: var(--color-six);
+  font-weight: 600;
 }
 
 /***************** FOOTER ********************/
