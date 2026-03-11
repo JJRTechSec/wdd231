@@ -1,0 +1,19 @@
+#cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1em;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(160, 118, 160);
+  padding: 1em;
+}
+
+.card img {
+  margin: 10px;
+  border: 4px solid rgba(0, 0, 0, 0.3);
+}

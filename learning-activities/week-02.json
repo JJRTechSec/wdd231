@@ -1,0 +1,42 @@
+{
+  "newMember": [
+    {
+      "familyName": "Johnson",
+      "dateMovedIn": "27th August 2013",
+      "NumberOfFamilyMembers": 6,
+      "visitedByBishopric": true,
+      "familyMembers": [
+        {
+          "name": "Gavin",
+          "genger": "M",
+          "birthdate": "26th March 1972"
+        },
+        {
+          "name": "Holly",
+          "genger": "F",
+          "birthdate": "12th November 1975"
+        },
+        {
+          "name": "Daniel",
+          "genger": "M",
+          "birthdate": "4th January 1998"
+        },
+        {
+          "name": "Thomas",
+          "genger": "M",
+          "birthdate": "13th August 2000"
+        },
+        {
+          "name": "Janet",
+          "genger": "F",
+          "birthdate": "28th January 2003"
+        },
+        {
+          "name": "Horace",
+          "genger": "M",
+          "birthdate": "2nd June 2005"
+        }
+      ]
+    }
+  ]
+}
