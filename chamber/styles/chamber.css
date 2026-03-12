@@ -59,6 +59,7 @@ header span {
   width: 44px;
   height: 44px;
   border: none;
+  border-radius: 4px;
   background-color: var(--color-four);
   opacity: 0.5;
   cursor: pointer;
@@ -119,13 +120,26 @@ nav ul li:hover {
 
 /***************** MAIN ********************/
 main {
-  display: flex;
-  flex-direction: flex;
-  flex-grow: 1;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
   padding: 10px;
 }
 
+.layout-button {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+}
+
+.layout-icon {
+  width: 35px;
+  height: 35px;
+}
 
 /***************** FOOTER ********************/
 
