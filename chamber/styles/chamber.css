@@ -1,0 +1,166 @@
+:root {
+  --color-one: #163d96;
+  --color-two: #f8f1f1;
+  --color-three: #4F46A3;
+  --color-four: #a5a5a5;
+  --color-five: #0033ab;
+  --color-six: #000000;
+  --font-one: Rubik;
+  --font-two: Mulish;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: var(--font-one);
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/***************** HEADER ********************/
+header {
+  display: flex;
+  height: 4em;
+  width: 100%;
+  padding: 10px;
+  align-items: end;
+  justify-content: space-around;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+header img {
+  width: 44px;
+  flex: 0.5;
+}
+
+header span {
+  flex: 4;
+  flex-wrap: wrap;
+  padding: 0 1em;
+  font-weight: 500;
+}
+
+.hamburger {
+  position: absolute;
+  bottom: 10%;
+  flex: 1;
+  right: 10px;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background-color: var(--color-four);
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.hamburger:before {
+  content: '\2630';
+}
+
+.hamburger.show:before {
+  content: '\00d7';
+}
+
+nav {
+  display: none;
+  width: 50%;
+}
+
+nav.show {
+  display: block;
+  position: absolute;
+  top: 2.7em;
+  right: 0;
+}
+
+nav ul {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+  align-items: center;
+  justify-content: end;
+  width: 100%;
+}
+
+nav ul li {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  width: 100%;
+  height: 44px;
+  background-color: var(--color-four);
+  padding-left: 0.5em;
+  cursor: pointer;
+}
+
+nav ul li:hover {
+  background-color: var(--color-two);
+  color: var(--color-six);
+}
+
+.current {
+  background-color: var(--color-three);
+  color: var(--color-two);
+}
+
+
+/***************** MAIN ********************/
+main {
+  display: flex;
+  flex-direction: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  padding: 10px;
+}
+
+
+/***************** FOOTER ********************/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-around;
+  width: 50%;
+  justify-content: space-between;
+  margin-bottom: 1em;
+}
+
+.social-media-link {
+  width: 44px;
+}
+
+.social-media-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1em;
+  background-color: var(--color-three);
+  color: var(--color-two);
+  width: 100%;
+  text-wrap: wrap;
+}
