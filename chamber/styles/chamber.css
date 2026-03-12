@@ -126,7 +126,7 @@ main {
   padding: 10px;
 }
 
-.layout-button {
+/*.layout-button {
   width: 44px;
   height: 44px;
   display: flex;
@@ -134,12 +134,16 @@ main {
   justify-content: center;
   cursor: pointer;
   border: none;
+}*/
+
+.layout-button {
+  display: none;
 }
 
-.layout-icon {
+/*.layout-icon {
   width: 35px;
   height: 35px;
-}
+}*/
 
 /***************** FOOTER ********************/
 
