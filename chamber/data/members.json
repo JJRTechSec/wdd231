@@ -1,0 +1,95 @@
+{
+  "newBusiness": [
+    {
+      "companyName": "KiropraktorKameratene",
+      "address": {
+        "streetAddress": "Actic Treningssenter",
+        "city": "Asker",
+        "postcode": 1386
+      },
+      "phoneNumber": 62522500,
+      "website": "https://kiropraktorkameratene.no/",
+      "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/692ea76cf3776b22024e2c21/839632be0_Kiropraktorkameratene-Logo.png",
+      "membershipLevel": 3,
+      "email": "post@kiropraktorkameratene.no"
+    },
+    {
+      "companyName": "Solaris Scholar",
+      "address": {
+        "streetAddress": "Myrabakken 72",
+        "city": "Asker",
+        "postcode": 1386
+      },
+      "phoneNumber": 134,
+      "website": "https://solarisscholar.com/",
+      "image": "",
+      "membershipLevel": 1,
+      "email": "solarisscholarnorway@gmail.com"
+    },
+    {
+      "companyName": "Pizzabakeren",
+      "address": {
+        "streetAddress": "Røykenveien 70",
+        "city": "Asker",
+        "postcode": 1386
+      },
+      "phoneNumber": 40001259,
+      "website": "https://www.pizzabakeren.no/",
+      "image": "https://static.pizzabakeren.com/resources/img/logo.png",
+      "membershipLevel": 2,
+      "email": "asker@pizzabakeren.no"
+    },
+    {
+      "companyName": "Eiqon AS",
+      "address": {
+        "streetAddress": "Gamle Borgenvei 3",
+        "city": "Asker",
+        "postcode": 1383
+      },
+      "phoneNumber": 40000074,
+      "website": "https://www.eiqon.no/",
+      "image": "https://www.eiqon.no/49b3e6/siteassets/system/logo-eiqon.svg",
+      "membershipLevel": 3,
+      "email": "post@eiqon.no"
+    },
+    {
+      "companyName": "Asker Museum",
+      "address": {
+        "streetAddress": "Otto Valstads vei 19",
+        "city": "Hvalstad",
+        "postcode": 1395
+      },
+      "phoneNumber": 66790011,
+      "website": "https://www.mia.no/askermuseum",
+      "image": "https://perspektivet.no/en/about-the-museum/",
+      "membershipLevel": 1,
+      "email": "asker.museum@mia.no"
+    },
+    {
+      "companyName": "Bunnpris Blakstad",
+      "address": {
+        "streetAddress": "Slemmestadveien 243",
+        "city": "Vettre",
+        "postcode": 1392
+      },
+      "phoneNumber": 66900311,
+      "website": "https://www.bunnpris.no/butikker/bunnpris-blakstad",
+      "image": "https://www.bunnpris.no/themes/custom/bouvet_theme/assets/images/svg/bunnpris.svg",
+      "membershipLevel": 2,
+      "email": "bpblakstad@bunnpris.no"
+    },
+    {
+      "companyName": "BKA Elektro AS",
+      "address": {
+        "streetAddress": "Ingolfs vei 23",
+        "city": "Asker",
+        "postcode": 1385
+      },
+      "phoneNumber": 66794236,
+      "website": "https://bkaelektro.no/",
+      "image": "https://bkaelektro.no/wp-content/uploads/2025/08/cc854849-49df-485c-b303-b04982a719ba.png",
+      "membershipLevel": 1,
+      "email": "hei@bkaelektro.no"
+    }
+  ]
+}
