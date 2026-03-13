@@ -11,7 +11,8 @@
       "website": "https://kiropraktorkameratene.no/",
       "image": "https://qtrypzzcjebvfcihiynt.supabase.co/storage/v1/object/public/base44-prod/public/692ea76cf3776b22024e2c21/839632be0_Kiropraktorkameratene-Logo.png",
       "membershipLevel": 3,
-      "email": "post@kiropraktorkameratene.no"
+      "email": "post@kiropraktorkameratene.no",
+      "slogan": "Bedre funksjon og mindre smerter i hverdagen"
     },
     {
       "companyName": "Solaris Scholar",
@@ -22,9 +23,10 @@
       },
       "phoneNumber": 134,
       "website": "https://solarisscholar.com/",
-      "image": "",
+      "image": "https://solarisscholar.com/images/websitebanner.png",
       "membershipLevel": 1,
-      "email": "solarisscholarnorway@gmail.com"
+      "email": "solarisscholarnorway@gmail.com",
+      "slogan": "Ja, Vi Elsker Norsk"
     },
     {
       "companyName": "Pizzabakeren",
@@ -37,7 +39,8 @@
       "website": "https://www.pizzabakeren.no/",
       "image": "https://static.pizzabakeren.com/resources/img/logo.png",
       "membershipLevel": 2,
-      "email": "asker@pizzabakeren.no"
+      "email": "asker@pizzabakeren.no",
+      "slogan": "Godt humør i hver eneste bit!"
     },
     {
       "companyName": "Eiqon AS",
@@ -50,7 +53,8 @@
       "website": "https://www.eiqon.no/",
       "image": "https://www.eiqon.no/49b3e6/siteassets/system/logo-eiqon.svg",
       "membershipLevel": 3,
-      "email": "post@eiqon.no"
+      "email": "post@eiqon.no",
+      "slogan": "Bygger det som varer"
     },
     {
       "companyName": "Asker Museum",
@@ -63,7 +67,8 @@
       "website": "https://www.mia.no/askermuseum",
       "image": "https://perspektivet.no/en/about-the-museum/",
       "membershipLevel": 1,
-      "email": "asker.museum@mia.no"
+      "email": "asker.museum@mia.no",
+      "slogan": "Et krus, et kyss, et helt museum"
     },
     {
       "companyName": "Bunnpris Blakstad",
@@ -76,7 +81,8 @@
       "website": "https://www.bunnpris.no/butikker/bunnpris-blakstad",
       "image": "https://www.bunnpris.no/themes/custom/bouvet_theme/assets/images/svg/bunnpris.svg",
       "membershipLevel": 2,
-      "email": "bpblakstad@bunnpris.no"
+      "email": "bpblakstad@bunnpris.no",
+      "slogan": "En god deal går aldri av moten"
     },
     {
       "companyName": "BKA Elektro AS",
@@ -89,7 +95,8 @@
       "website": "https://bkaelektro.no/",
       "image": "https://bkaelektro.no/wp-content/uploads/2025/08/cc854849-49df-485c-b303-b04982a719ba.png",
       "membershipLevel": 1,
-      "email": "hei@bkaelektro.no"
+      "email": "hei@bkaelektro.no",
+      "slogan": "Din elektriker i Asker, Bærum, Oslo og omegn"
     }
   ]
 }

@@ -1,7 +1,7 @@
 const navButton = document.querySelector('#navButton');
 const navBar = document.querySelector('.navigation');
 
-const cards = document.querySelector('cards');
+const cards = document.querySelector('.cards');
 const url = './data/members.json';
 
 navButton.addEventListener('click', () => {
@@ -21,27 +21,43 @@ const displayBusinesses = (businesses) => {
     let card = document.createElement('section');
     let businessName = document.createElement('h2');
     let logo = document.createElement('img');
-    let address = document.createElement('span');
     let phoneNumber = document.createElement('span');
-    let website = document.createElement('span');
+    let website = document.createElement('a');
     let email = document.createElement('span');
+    let slogan = document.createElement('span');
 
+    // business name
     businessName.textContent = business.companyName;
 
-    logo.setAttribute('src', business.imageurl);
+    // slogan
+    slogan.textContent = business.slogan;
+
+    // logo
+    logo.setAttribute('src', business.image);
     logo.setAttribute('alt', `Logo for ${business.companyName}`);
     logo.setAttribute('loading', 'lazy');
     logo.setAttribute('width', '150');
     logo.setAttribute('height', '200');
 
+    // email
+    email.textContent = `EMAIL: ${business.email}`;
+    
+    // phone number
+    phoneNumber.textContent = `PHONE: ${business.phoneNumber}`;
+
+    // website
+    website.href = business.website;
+    website.textContent = business.companyName;
+    website.target = "_blank";
+
     card.classList.add('card');
 
     card.appendChild(businessName);
-    card.appendChild(address);
+    card.appendChild(slogan);
+    card.appendChild(logo);
+    card.appendChild(email);
     card.appendChild(phoneNumber);
     card.appendChild(website);
-    card.appendChild(email);
-    card.appendChild(logo);
     cards.appendChild(card);
   });
 };
