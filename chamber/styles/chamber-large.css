@@ -61,8 +61,8 @@
   }
 
   main h1 {
-    border: 1px solid black;
     display: inline-block;
+    margin-left: 6px;
   }
 
   .layout-button {
@@ -73,16 +73,20 @@
   justify-content: center;
   cursor: pointer;
   border: none;
+  background-color: var(--color-two);
+  display: inline-block;
+  border-radius: 4px;
+  color: var(--color-one);
   }
 
-  .layout-button {
-    border: 1px solid red;
-    display: inline-block;
+  .layout-button::before {
+    content: '\2630';
+    font-size: 2em;
   }
 
-  .layout-icon {
-    width: 35px;
-    height: 35px;
+  .layout-button.column::before {
+    content: '\1392\1392\1392';
+    font-size: 2em;
   }
 
   .cards {
@@ -104,6 +108,11 @@
     color: var(--color-two);
     border-radius: 6px;
     padding: 0 10px;
+  }
+
+  .cards.column {
+    display: flex;
+    flex-direction: column;
   }
 
   .business-name,
