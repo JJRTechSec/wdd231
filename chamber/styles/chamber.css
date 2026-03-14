@@ -25,6 +25,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /***************** HEADER ********************/
@@ -37,6 +38,7 @@ header {
   justify-content: space-around;
   position: fixed;
   top: 0;
+  z-index: 10;
   flex-wrap: wrap;
   background-color: var(--color-three);
   color: var(--color-two);
@@ -48,8 +50,8 @@ header img {
 }
 
 header span {
+  display: flex;
   flex: 4;
-  flex-wrap: wrap;
   padding: 0 1em;
   font-weight: 500;
 }
@@ -124,36 +126,18 @@ nav ul li:hover {
 /***************** MAIN ********************/
 main {
   display: flex;
+  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 10px;
-  margin: 0;
+  margin: 4em 0 0 0;
   width: 100%;
 }
-
-h1 {
-  margin-top: 2.5em;
-}
-
-/*.layout-button {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  border: none;
-}*/
 
 .layout-button {
   display: none;
 }
-
-/*.layout-icon {
-  width: 35px;
-  height: 35px;
-}*/
 
 .cards {
   display: flex;
@@ -242,6 +226,7 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex: 1;
 }
 
 .social-icon {
