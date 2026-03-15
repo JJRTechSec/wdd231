@@ -108,11 +108,16 @@
     color: var(--color-two);
     border-radius: 6px;
     padding: 0 10px;
+    box-shadow: 0 0 10px #000;
   }
 
   .cards.column {
     display: flex;
     flex-direction: column;
+  }
+
+  .card .column {
+    grid-template-columns: 1fr 1fr;
   }
 
   .business-name,

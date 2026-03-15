@@ -2,6 +2,7 @@ const navButton = document.querySelector('#navButton');
 const navBar = document.querySelector('.navigation');
 const layoutButton = document.querySelector('#layoutToggle');
 let card = document.createElement('section');
+const main = document.querySelector('main');
 
 const cards = document.querySelector('.cards');
 const url = './data/members.json';
@@ -15,6 +16,7 @@ layoutButton.addEventListener('click', () => {
   layoutButton.classList.toggle('column');
   cards.classList.toggle('column');
   main.classList.toggle('column');
+  card.classList.toggle('column');
 })
 
 async function getBusinessData() {
