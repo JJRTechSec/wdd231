@@ -50,10 +50,10 @@ header img {
 }
 
 header span {
-  border: 1px solid black;
   display: flex;
   flex: 2;
   padding: 0 1em;
+  font-size: 2em;
   font-weight: 500;
   text-wrap: balance;
   margin-right: 1em;
@@ -73,11 +73,11 @@ header span {
   cursor: pointer;
 }
 
-.hamburger:before {
+.hamburger::before {
   content: '\2630';
 }
 
-.hamburger.show:before {
+.hamburger.show::before {
   content: '\00d7';
 }
 
@@ -99,6 +99,10 @@ nav ul {
   line-height: 1.5em;
   align-items: center;
   justify-content: end;
+  width: 100%;
+}
+
+nav ul a {
   width: 100%;
 }
 

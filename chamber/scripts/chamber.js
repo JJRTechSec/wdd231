@@ -1,9 +1,8 @@
 const navButton = document.querySelector('#navButton');
 const navBar = document.querySelector('.navigation');
 const layoutButton = document.querySelector('#layoutToggle');
-let card = document.createElement('section');
+const businessCard = document.querySelectorAll('.card');
 const main = document.querySelector('main');
-
 const cards = document.querySelector('.cards');
 const url = './data/members.json';
 
@@ -16,7 +15,7 @@ layoutButton.addEventListener('click', () => {
   layoutButton.classList.toggle('column');
   cards.classList.toggle('column');
   main.classList.toggle('column');
-  card.classList.toggle('column');
+  businessCard.classList.toggle('column');
 })
 
 async function getBusinessData() {
@@ -28,7 +27,7 @@ async function getBusinessData() {
 
 const displayBusinesses = (businesses) => {
   businesses.forEach((business) => {
-    card = document.createElement('section');
+    const card = document.createElement('section');
     let businessName = document.createElement('h2');
     let logo = document.createElement('img');
     let phoneNumber = document.createElement('span');

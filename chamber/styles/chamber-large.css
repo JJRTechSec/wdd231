@@ -48,7 +48,6 @@
 
   nav ul a {
     text-decoration: none;
-    width: 100%;
     color: var(--color-two);
     border-left: 1px solid var(--color-two);
     height: 100%;
