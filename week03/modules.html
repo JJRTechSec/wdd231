@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-  <html lang="en">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modules Example: Course and Sections</title>
     <link rel="stylesheet" href="styles/modules.css">
-    <script type="module" src="scripts/modules.js"></script>
+    <script type="module" src="scripts/modules.mjs"></script>
   </head>
 
   <body>
@@ -16,10 +16,7 @@
       <div id="enrollment">
         <label for="sectionNumber">Choose a section:</label>
         <select id="sectionNumber">
-          <option value="0" selected>--</option>
-          <option value="1" selected>1</option>
-          <option value="2" selected>2</option>
-          <option value="3" selected>3</option>
+          <option value="0" disabled selected>--</option>
         </select>
         <button id="enrollStudent">Enroll a Student</button>
         <button id="dropStudent">Drop a Student</button>
