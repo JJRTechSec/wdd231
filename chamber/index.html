@@ -6,9 +6,9 @@
     <!-- FAVICON -->
     <link rel="icon" href="./images/chamber-logo.svg">
     <!-- TITLE -->
-    <title>Directory - Asker Chamber of Commerce</title>
+    <title id="index">Asker Chamber of Commerce</title>
     <!-- META -->
-    <meta name="description" content="WDD 231 - Directory for the chamber of commerce in Asker, Norway.">
+    <meta name="description" content="WDD 231 - Homapage for the Chamber of Commerce in Asker, Norway.">
     <meta name="author" content="Joseph Jameson-Rickard">
 
     <!-- FACEBOOK META -->
@@ -31,6 +31,7 @@
 
     <!-- SCRIPTS -->
     <script src="./scripts/chamber.js" defer></script>
+    <script src="./scripts/weather.js" defer></script>
     <script src="./scripts/get-dates.js" defer></script>
 
   </head>
@@ -50,10 +51,33 @@
       </nav>
     </header>
     <main>
+      <picture class="hero">
+        <source srcset="./images/chamber-hero-large.webp" media="min-width: 1000px">
+        <source srcset="./images/chamber-hero-medium.webp" media="min-width: 750px">
+        <img src="./images/chamber-hero.webp" alt="" width="100%" height="50%">
+      </picture>
+
+      <a href="#" class="call-to-action"><button class="call-to-action">Call to Action</button></a>
+
+      <!--********** CURRENT EVENTS  SECTION *********-->
+      <section class="current-events"></section>
+
+      <!--********** WEATHER SECTION *********-->
+      <section class="weather-section">
+        <figure>
+          <p>Asker, Norway - <span id="currentTemp"></span></p>
+          <img id="weather-icon" src="" alt="Icon depicting the current weather in Asker, Norway">
+          <p id="weatherDay1"></p>
+          <p id="weatherDay2"></p>
+          <p id="weatherDay3"></p>
+          <figcaption></figcaption>
+        </figure>
+      </section>
+
+      <!--********** SPOTLIGHT SECTION *********-->
+      <section class="spotlight-section"></section>
+
       <h1>Home</h1>
-      <button id="layoutToggle" class="layout-button"
-        tooltip="Button to switch the layout between grid and single-column"></button>
-      <div class="cards"></div>
     </main>
     <footer>
       <div class="footer-left">
