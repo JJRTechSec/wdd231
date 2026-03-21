@@ -1,8 +1,32 @@
-layoutButton.addEventListener('click', () => {
-  layoutButton.classList.toggle('column');
-  cards.classList.toggle('column');
-  main.classList.toggle('column');
-  businessCard.classList.toggle('column');
+const gridButton = document.querySelector('#gridLayout');
+const listButton = document.querySelector('#listLayout');
+const main = document.querySelector('main');
+const cards = document.querySelector('.cards');
+
+gridButton.addEventListener('click', () => {
+  if (!gridButton.classList.contains('active')) {
+    gridButton.classList.add('active');
+    listButton.classList.remove('active');
+  };
+  cards.classList.remove('list');
+  const businessCards = document.querySelectorAll('.card');
+  businessCards.forEach(card => {
+    card.classList.remove('list');
+  });
+});
+
+listButton.addEventListener('click', () => {
+  if (!listButton.classList.contains('active')) {
+    listButton.classList.add('active');
+    gridButton.classList.remove('active');
+  };
+  cards.classList.remove('grid');
+  cards.classList.add('list');
+  const businessCards = document.querySelectorAll('.card');
+  businessCards.forEach(card => {
+    card.classList.remove('grid');
+    card.classList.add('list');
+  });
 });
 
 async function getBusinessData() {
@@ -21,6 +45,7 @@ const displayBusinesses = (businesses) => {
     let website = document.createElement('a');
     let email = document.createElement('span');
     let slogan = document.createElement('span');
+    let membership = document.createElement('span');
 
     // business name
     businessName.textContent = business.companyName;
@@ -48,17 +73,23 @@ const displayBusinesses = (businesses) => {
 
     // website
     website.href = business.website;
-    website.textContent = business.companyName;
+    website.textContent = business.website;
     website.target = "_blank";
     website.classList.add('company-info', 'company-website');
 
+    // membership
+    membership.textContent = `Membership Level: ${business.membershipLevel}`;
+    membership.classList.add('company-info', 'membership');
+
     card.classList.add('card');
+    card.classList.add('grid');
 
     card.appendChild(businessName);
     card.appendChild(slogan);
     card.appendChild(logo);
     card.appendChild(email);
     card.appendChild(phoneNumber);
+    card.appendChild(membership);
     card.appendChild(website);
     cards.appendChild(card);
   });

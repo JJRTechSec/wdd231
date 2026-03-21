@@ -74,9 +74,19 @@
     margin: 4em 0 0 0;
   }
 
+  .directory-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   main h1 {
     display: inline-block;
     margin-left: 6px;
+  }
+
+  .directory-main h1 {
+    width: 100%;
   }
 
   /**************** HOME ***************/
@@ -103,7 +113,6 @@
   }
 
   .home-grid {
-    border: 1px solid lime;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
@@ -115,21 +124,26 @@
     line-height: 1.5em;
   }
 
-  .current-events-section,
-  .current-weather-section,
-  .forecast-weather-section,
-  .spotlight-section {
-  }
-
   .home-grid h2 {
-    border: 1px solid red;
     width: 100%;
     grid-column: 1 / -1;
+    text-align: start;
+    padding-left: 0.5em;
   }
 
   /*************** DIRECTORY ***************/
+  .layout-choice-section {
+    width: 100%;
+    display: block;
+  }
 
-  .layout-button {
+  .layout-choice-section h2 {
+    text-align: start;
+    display: inline-block;
+  }
+
+  .grid-button,
+  .list-button {
   width: 44px;
   height: 44px;
   display: flex;
@@ -143,46 +157,60 @@
   color: var(--color-one);
   }
 
-  .layout-button::before {
+  .list-button::before {
     content: '\2630';
     font-size: 2em;
   }
 
-  .layout-button.column::before {
+  .grid-button::before {
     content: '\1392\1392\1392';
     font-size: 2em;
   }
 
   .cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     gap: 1em;
     width: 100%;
     padding: 6px;
     margin: 0;
+    align-items: stretch;
   }
 
   .card {
     display: grid;
-    grid-template-columns: 120px 2fr;
+    grid-template-columns: 160px 2fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     column-gap: 10px;
     width: 100%;
+    height: 100%;
     margin: 1em 0;
     background-color: var(--color-three);
     color: var(--color-two);
     border-radius: 6px;
     padding: 0 10px;
-    box-shadow: 0 0 10px #000;
   }
 
-  .cards.column {
+  .cards.list {
     display: flex;
     flex-direction: column;
+    margin: 0;
   }
 
-  .card .column {
-    grid-template-columns: 1fr 1fr;
+  .cards.list .card {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: center;
+    column-gap: 4px;
+  }
+
+  .cards.list .card .slogan {
+    border-bottom: none;
+  }
+
+  .cards.list img {
+    display: none;
   }
 
   .business-name,
@@ -209,6 +237,7 @@
   }
 
   .logo {
+    width: 160px;
     grid-row: 3 / 6;
   }
 
@@ -231,6 +260,7 @@
     justify-content: start;
     font-size: 1em;
     line-height: 0;
+    margin-top: 3em;
   }
 
   .footer-left,

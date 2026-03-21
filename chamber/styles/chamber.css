@@ -119,6 +119,7 @@ nav ul li {
   padding-left: 0.5em;
   color: var(--color-six);
   cursor: pointer;
+  font-weight: 600;
 }
 
 nav ul li:hover {
@@ -144,6 +145,10 @@ main {
   width: 100%;
 }
 
+main h2 {
+  text-align: center;
+}
+
 /***************** INDEX ******************/
 .hero {
   width: 100%;
@@ -164,13 +169,19 @@ main {
   font-size: 1em;
   font-weight: 600;
   cursor: pointer;
+  background-color: var(--color-three);
+  color: var(--color-two);
+  border: none;
+  border-radius: 6px;
 }
 
 .current-events-section,
 .current-weather-section,
 .forecast-weather-section,
 .spotlight-section {
-  background-color: var(--color-four);
+  background-color: var(--color-three);
+  color: var(--color-two);
+  border-radius: 6px;
   padding: 1em;
   height: 200px;
   margin: 0 10px 1em 10px;
@@ -178,8 +189,14 @@ main {
   box-shadow: 0 0 6px var(--color-one);
 }
 
+figure {
+  margin: 0;
+  width: 100%;
+  text-wrap: wrap;
+}
+
 /************** DIRECTORY *****************/
-.layout-button {
+.layout-choice-section {
   display: none;
 }
 
@@ -203,6 +220,7 @@ main {
   color: var(--color-two);
   border-radius: 6px;
   padding: 0 10px;
+  box-shadow: 0 0 6px var(--color-one);
 }
 
 .business-name,
