@@ -97,33 +97,28 @@ nav ul {
   display: flex;
   flex-direction: column;
   line-height: 1.5em;
-  align-items: center;
-  justify-content: end;
-  width: 100%;
-}
-
-nav ul a {
-  text-decoration: none;
+  align-items: stretch;
   width: 100%;
 }
 
 nav ul li {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  text-decoration: none;
-  list-style-type: none;
   width: 100%;
-  height: 44px;
-  background-color: var(--color-four);
-  padding-left: 0.5em;
-  color: var(--color-six);
-  cursor: pointer;
-  font-weight: 600;
+  list-style-type: none;
+  background-color: var(--color-two);
+
 }
 
-nav ul li:hover {
-  background-color: var(--color-two);
+nav ul li a {
+  width: 100%;
+  color: var(--color-six);
+  text-decoration: none;
+  display: block;
+  padding: 0.75em;
+}
+
+nav ul li a:hover {
+  cursor: pointer;
+  background-color: var(--color-four);
   color: var(--color-six);
 }
 
@@ -131,7 +126,6 @@ nav ul li:hover {
   background-color: var(--color-three);
   color: var(--color-two);
 }
-
 
 /***************** MAIN ********************/
 main {
