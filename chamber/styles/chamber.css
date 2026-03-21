@@ -105,6 +105,7 @@ nav ul li {
   width: 100%;
   list-style-type: none;
   background-color: var(--color-two);
+  color: var(--color-six);
 
 }
 
