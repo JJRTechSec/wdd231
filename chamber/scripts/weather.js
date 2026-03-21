@@ -7,7 +7,10 @@ const captionDesc = document.querySelector('figcaption');
 const lat = 59.83;
 const lon = 10.44;
 const apiKey = '457b7803269547921713e765a31713ae';
-const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&cnt=30&units=metric&appid=${apiKey}`;
+
+
+// FUNCTIONS
 
 async function weatherApiFetch() {
   try {
@@ -15,6 +18,7 @@ async function weatherApiFetch() {
     if (response.ok) {
       const data = await response.json();
       console.log(data);
+      //filterForecasts(data);
       displayResults(data);
     } else {
       throw Error(await response.text());
@@ -27,11 +31,37 @@ async function weatherApiFetch() {
 
 function displayResults(data) {
   currentTemp.innerHTML = `${data.list[0].main.temp.toFixed(0)}&deg;C`;
-  day1Temp.innerHTML = `${data.list[1].main.temp.toFixed(0)}&deg;C`;
-  day2Temp.innerHTML = `${data.list[2].main.temp.toFixed(0)}&deg;C`;
-  day3Temp.innerHTML = `${data.list[3].main.temp.toFixed(0)}&deg;C`;
+  const days = filterForecasts(data);
+  if (days.length >= 3) {
+    day1Temp.innerHTML = `${getWeekday(days[0].dt_txt)}: ${days[0].main.temp.toFixed(0)}&deg;C`;
+    day2Temp.innerHTML = `${getWeekday(days[1].dt_txt)}: ${days[1].main.temp.toFixed(0)}&deg;C`;
+    day3Temp.innerHTML = `${getWeekday(days[2].dt_txt)}: ${days[2].main.temp.toFixed(0)}&deg;C`;
+  };
   captionDesc.textContent = data.list[0].weather[0].description;
   weatherIcon.setAttribute('src', `https://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png`);
+}
+
+
+function filterForecasts(data) {
+  const forecasts = data.list;
+  const today = new Date(forecasts[0].dt_txt);
+  const results = forecasts.filter((item) => {
+    const date = new Date(item.dt_txt);
+    const dayDiff = date.getDate() - today.getDate();
+    return (
+      dayDiff >= 1 &&
+      dayDiff <= 3 &&
+      date.getHours() === 12
+    );
+  });
+  return results;
+}
+
+function getWeekday(dateString) {
+  const date = new Date(dateString);
+  return date.toLocaleDateString('en-US', {
+    weekday: 'short'
+  });
 }
 
 weatherApiFetch();
