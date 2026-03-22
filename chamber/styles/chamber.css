@@ -186,6 +186,9 @@ figure {
   margin: 0;
   width: 100%;
   text-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .spotlight-section {
