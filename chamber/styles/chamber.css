@@ -171,8 +171,7 @@ main h2 {
 
 .current-events-section,
 .current-weather-section,
-.forecast-weather-section,
-.spotlight-section {
+.forecast-weather-section {
   background-color: var(--color-three);
   color: var(--color-two);
   border-radius: 6px;
@@ -190,16 +189,32 @@ figure {
 }
 
 .spotlight-section {
-  border: 1px solid red;
   background: none;
   display: flex;
   flex-direction: column;
   height: auto;
+  padding: 0 10px;
+  margin-bottom: 2em;
 }
 
 .spotlight {
   width: 100%;
-  margin: 10px;
+  color: var(--color-two);
+  background-color: var(--color-three);
+  border-radius: 6px;
+  margin-bottom: 1em;
+  padding: 10px;
+  box-shadow: 0 0 6px var(--color-one);
+  display: flex;
+  flex-direction: column;
+}
+
+.spotlight .business-name {
+  font-size: 1.5em;
+}
+
+.spotlight img {
+  width: 100%;
 }
 
 /************** DIRECTORY *****************/

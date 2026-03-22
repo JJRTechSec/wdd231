@@ -51,11 +51,11 @@ const displaySpotlightBusiness = (higherMembers) => {
     logo.classList.add('logo');
 
     // phone number
-    phoneNumber.textContent = `PHONE: ${business.phoneNumber}`;
+    phoneNumber.innerHTML = `<strong>PHONE</strong>: ${business.phoneNumber}`;
     phoneNumber.classList.add('company-info', 'company-number');
 
     // address
-    address.textContent = `Address: ${business.address.streetAddress}, ${business.address.city}, ${business.address.postcode}`;
+    address.innerHTML = `<strong>Address</strong>: ${business.address.streetAddress}, ${business.address.city}, ${business.address.postcode}`;
     address.classList.add('company-info', 'address');
 
     // website
@@ -65,7 +65,7 @@ const displaySpotlightBusiness = (higherMembers) => {
     website.classList.add('company-info', 'company-website');
 
     // membership
-    membership.textContent = `Membership Level: ${business.membershipLevel}`;
+    membership.innerHTML = `<strong>Membership Level</strong>: ${business.membershipLevel}`;
     membership.classList.add('company-info', 'membership');
 
     spotlightBusiness.classList.add('spotlight');

@@ -85,11 +85,12 @@
   /**************** HOME ***************/
   .hero {
     width: 100%;
+    height: 60vh;
   }
 
   .hero img {
     width: 100%;
-    height: 25%;
+    height: 100%;
   }
 
   .call-to-actionbtn {
@@ -125,9 +126,13 @@
   }
 
   .spotlight-section {
+    border: 1px solid lime;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: 100%;
+  }
+
+  .spotlight {
   }
 
   /*************** DIRECTORY ***************/
