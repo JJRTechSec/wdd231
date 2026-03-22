@@ -144,6 +144,11 @@ main h2 {
 }
 
 /***************** INDEX ******************/
+.hero-div {
+  width: 100%;
+  position: relative;
+}
+
 .hero {
   width: 100%;
 }
@@ -153,20 +158,23 @@ main h2 {
   height: auto;
 }
 
-.call-to-action {
-  width: 60%;
-}
-
 .call-to-actionbtn {
-  width: 100%;
+  width: 70%;
   padding: 0.5em 0;
-  font-size: 1em;
-  font-weight: 600;
   cursor: pointer;
   background-color: var(--color-three);
-  color: var(--color-two);
   border: none;
   border-radius: 6px;
+  color: var(--color-two);
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.5em 1em;
+  position: absolute;
+  bottom: 0.75em;
+  left: 3em;
+  z-index: 100;
 }
 
 .current-events-section,

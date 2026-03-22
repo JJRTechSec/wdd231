@@ -6,7 +6,7 @@
     <!-- FAVICON -->
     <link rel="icon" href="./images/chamber-logo.svg">
     <!-- TITLE -->
-    <title id="index">Asker Chamber of Commerce</title>
+    <title>Homepage for the Chamber of Commerce in Asker, Norway</title>
     <!-- META -->
     <meta name="description" content="WDD 231 - Homapage for the Chamber of Commerce in Asker, Norway.">
     <meta name="author" content="Joseph Jameson-Rickard">
@@ -52,20 +52,21 @@
     </header>
     <!--************* MAIN *************-->
     <main>
-      <picture class="hero">
-        <source srcset="./images/chamber-hero-large.webp" media="(min-width: 1000px)">
-        <source srcset="./images/chamber-hero-medium.webp" media="(min-width: 750px)">
-        <img src="./images/chamber-hero.webp" alt="Photo of the outside of the building for the Chamber of Commerce in Asker">
-      </picture>
-
-      <a href="#" class="call-to-action"><button class="call-to-actionbtn">Join the Chamber</button></a>
+      <div class="hero-div">
+        <picture class="hero">
+          <source srcset="./images/chamber-hero-large.webp" media="(min-width: 1000px)">
+          <source srcset="./images/chamber-hero-medium.webp" media="(min-width: 750px)">
+          <img src="./images/chamber-hero.webp" alt="Photo of the outside of the building for the Chamber of Commerce in Asker">
+        </picture>
+        <a class="call-to-actionbtn call-to-action">Join the Chamber</a>
+      </div>
 
       <h1 class="home">Home</h1>
 
       <div class="home-grid">
         <!--********** CURRENT EVENTS  SECTION *********-->
         <section class="current-events-section">
-          <h3>Upcoming Events</h3>
+          <h2>Upcoming Events</h2>
           <ul>
             <li>Business Networking Event - April 10th, 13:00</li>
             <li>Start-up Workshop - April 18th, 09:00</li>
@@ -77,7 +78,7 @@
         <section class="current-weather-section">
           <figure>
             <h3>Current Weather in Asker: <span id="currentTemp"></span></h3>
-            <img id="weather-icon" src="" alt="Icon depicting the current weather in Asker, Norway">
+            <img id="weather-icon" src="./images/" alt="Icon depicting the current weather in Asker, Norway">
             <figcaption></figcaption>
           </figure>
         </section>
