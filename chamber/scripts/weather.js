@@ -7,6 +7,7 @@ const captionDesc = document.querySelector('figcaption');
 const lat = 59.83;
 const lon = 10.44;
 const apiKey = '457b7803269547921713e765a31713ae';
+const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather/?lat=${lat}&lon=${lon}&cnt=30&units=metric&appid=${apiKey}`;
 const weatherUrl = `https://api.openweathermap.org/data/2.5/forecast/?lat=${lat}&lon=${lon}&cnt=30&units=metric&appid=${apiKey}`;
 
 
@@ -17,8 +18,6 @@ async function weatherApiFetch() {
     const response = await fetch(weatherUrl);
     if (response.ok) {
       const data = await response.json();
-      console.log(data);
-      //filterForecasts(data);
       displayResults(data);
     } else {
       throw Error(await response.text());
@@ -47,10 +46,10 @@ function filterForecasts(data) {
   const today = new Date(forecasts[0].dt_txt);
   const results = forecasts.filter((item) => {
     const date = new Date(item.dt_txt);
-    const dayDiff = date.getDate() - today.getDate();
+    const dayDifference = date.getDate() - today.getDate();
     return (
-      dayDiff >= 1 &&
-      dayDiff <= 3 &&
+      dayDifference >= 1 &&
+      dayDifference <= 3 &&
       date.getHours() === 12
     );
   });
