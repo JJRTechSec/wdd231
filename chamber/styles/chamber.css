@@ -160,7 +160,6 @@ main h2 {
 
 .call-to-actionbtn {
   width: 70%;
-  padding: 0.5em 0;
   cursor: pointer;
   background-color: var(--color-three);
   border: none;
