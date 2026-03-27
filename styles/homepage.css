@@ -213,6 +213,22 @@ section button {
   font-weight: 600;
 }
 
+/************** DIALOG **************/
+dialog {
+  display: block;
+  background-color: var(--color-two);
+  border-radius: 8px;
+  width: 40%;
+  height: 50vh;
+  box-shadow: 0 0 6px var(--color-one);
+}
+
+#closeDialog {
+  margin: 0 auto;
+  padding: 0.5em 2em;
+  border-radius: 4px;
+}
+
 /***************** FOOTER ********************/
 
 footer {

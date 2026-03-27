@@ -1,0 +1,14 @@
+button {
+  background-color: hotpink;
+}
+
+#dialogBox {
+}
+
+#closeButton {
+  background-color: violet;
+}
+
+::backdrop {
+  background: rgba(13, 120, 12, 0.2);
+}
