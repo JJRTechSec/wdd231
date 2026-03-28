@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- FAVICON -->
+  <link rel="icon" href="./images/chamber-logo.svg">
+  <!-- TITLE -->
+  <title>Join the Chamber of Commerce in Asker, Norway</title>
+  <!-- META -->
+  <meta name="description" content="WDD 231 - Directory for the chamber of commerce in Asker, Norway.">
+  <meta name="author" content="Joseph Jameson-Rickard">
+
+  <!-- FACEBOOK META -->
+  <meta property="og:locale" content="en_NO">
+  <meta property="og:image" content="https://jjrtechsec.github.io/wdd231/chamber/images/chamber-hero-large.webp">
+  <meta property="og:url" content="https://jjrtechsec.github.io/wdd231/chamber/directory">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Joseph Jameson-Rickard">
+  <meta property="og:title" content="Directory">
+  <meta property="og:description" content="WDD 231 - Directory for the chamber of commerce in Asker, Norway.">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS FILES -->
+  <link rel="stylesheet" href="./styles/chamber.css">
+  <link rel="stylesheet" href="./styles/chamber-large.css">
+
+  <!-- SCRIPTS -->
+  <script src="./scripts/chamber.js" defer></script>
+  <script src="./scripts/get-dates.js" defer></script>
+
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <img src="./images/chamber-logo.svg" alt="Logo of the Asker Chamber of Commerce">
+    <span>Asker Chamber of Commerce</span>
+    <button id="navButton" class="hamburger" aria-label="navigation"></button>
+    <nav class="navigation">
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./directory.html">Directory</a></li>
+        <li class="current"><a href="./join.html" class="current">Join</a></li>
+        <li><a href="#">Discover</a></li>
+      </ul>
+    </nav>
+  </header>
+  <!-- MAIN -->
+  <main class="directory-main grid">
+    <h1>Join the Asker Chamber of Commerce</h1>
+
+    <form method="GET" action="thankyou.html">
+      <!-- PERSONAL INFO -->
+      <fieldset>
+        <legend>Personal Info</legend>
+        <label>First Name<span>*</span>
+          <input type="text" name="first" title="Your First Name" autocomplete="given-name" required>
+        </label>
+        <label>Last Name<span>*</span>
+          <input type="text" name="last" title="Your Last Name" autocomplete="family-name" required>
+        </label>
+        <label>Phone Number<span>*</span>
+          <input type="tel" name="phone" title="Your Phone Number" autocomplete="tel" required>
+        </label>
+        <label>Email<span>*</span>
+          <input type="email" name="email" title="Your Email Address" autocomplete="email" required placeholder="business@email.com">
+        </label>
+      </fieldset>
+      <!-- BUSINESS INFO -->
+      <fieldset>
+        <legend>Company Info</legend>
+        <label>Work Title
+          <input type="text" name="work-title" title="Work Title" autocomplete="organization-title">
+        </label>
+        <label>Company Name<span>*</span>
+          <input type="text" name="companyName" title="Company Name" autocomplete="organization" required>
+        </label>
+        <label>Business Description<span>*</span>
+          <textarea name="companyDescription" title="Company Description" required></textarea>
+        </label>
+      </fieldset>
+      <!-- MEMBERSHIP LEVEL -->
+      <fieldset>
+        <legend>Membership Level Selection</legend>
+        <label>Membership Level<span>*</span>
+          <select id="membership" name="membership" title="Membership Level" required>
+            <option value="" disabled selected>Select Membership Level</option>
+            <option value="np">Non-Profit Membership, no fee (NP)</option>
+            <option value="bronze">Bronze Membership (Bronze)</option>
+            <option value="silver">Silver Membership (Silver)</option>
+            <option value="gold">Gold Membership (Gold)</option>
+          </select>
+        </label>
+      </fieldset>
+      <input type="hidden" name="timestamp" id="timestamp">
+      <input type="submit" value="Join the Chamber">
+    </form>
+
+    <!-- MEMBERSHIP CARDS -->
+     <div class="membership-card-section"></div>
+  </main>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <p>Asker Chamber of Commerce</p>
+      <p>24 Torvveien</p>
+      <p>Asker, 1383, Norge</p>
+      <p>info@askercc.org</p>
+      <p>(+47) 12 34 56 78</p>
+    </div>
+    <div class="footer-middle">
+      <a href="https://www.youtube.com/">
+        <img class="social-icon" src="./images/youtube-icon.svg"
+          alt="Link to YouTube account of the Asker Chamber of Commerce">
+      </a>
+      <a href="https://x.com/">
+        <img class="social-icon" src="./images/twitter-icon.svg"
+          alt="Link to Twitter profile of the Asker Chamber of Commerce">
+      </a>
+      <a href="https://www.linkedin.com/">
+        <img class="social-icon" src="./images/linkedin-icon.svg"
+          alt="Link to LinkedIn profile of the Asker Chamber of Commerce">
+      </a>
+    </div>
+    <div class="footer-right">
+      <p>WDD231 Class Project</p>
+      <p>Joseph Jameson-Rickard</p>
+      <p>&copy;<span id="currentYear"></span> Asker Chamber of Commerce</p>
+      <p id="lastModified"></p>
+    </div>
+  </footer>
+</body>
+
+</html>
