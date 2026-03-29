@@ -35,7 +35,7 @@
   <!-- SCRIPTS -->
   <script src="./scripts/chamber.js" defer></script>
   <script src="./scripts/get-dates.js" defer></script>
-  <script src="./scripts/thankyou.js" defer></script>
+  <script src="./scripts/join.js" defer></script>
 
 </head>
 
@@ -62,16 +62,16 @@
       <!-- PERSONAL INFO -->
       <fieldset>
         <legend>Personal Info</legend>
-        <label>First Name<span>*</span>
+        <label>First Name<span style="color: red;">*</span>
           <input type="text" name="first" title="Your First Name" autocomplete="given-name" required>
         </label>
-        <label>Last Name<span>*</span>
+        <label>Last Name<span style="color: red;">*</span>
           <input type="text" name="last" title="Your Last Name" autocomplete="family-name" required>
         </label>
-        <label>Phone Number<span>*</span>
+        <label>Phone Number<span style="color: red;">*</span>
           <input type="tel" name="phone" title="Your Phone Number" autocomplete="tel" required>
         </label>
-        <label>Email<span>*</span>
+        <label>Email<span style="color: red;">*</span>
           <input type="email" name="email" title="Your Email Address" autocomplete="email" required placeholder="name@business.com">
         </label>
       </fieldset>
@@ -81,17 +81,17 @@
         <label>Work Title
           <input type="text" name="workTitle" title="Work Title" autocomplete="organization-title">
         </label>
-        <label>Company Name<span>*</span>
+        <label>Company Name<span style="color: red;">*</span>
           <input type="text" name="companyName" title="Company Name" autocomplete="organization" required>
         </label>
-        <label>Business Description<span>*</span>
+        <label>Business Description<span style="color: red;">*</span>
           <textarea name="companyDescription" title="Company Description" required></textarea>
         </label>
       </fieldset>
       <!-- MEMBERSHIP LEVEL -->
       <fieldset>
         <legend>Membership Level Selection</legend>
-        <label>Membership Level<span>*</span>
+        <label>Membership Level<span style="color: red;">*</span>
           <select id="membership" name="membership" title="Membership Level" required>
             <option value="" disabled selected>Select Membership Level</option>
             <option value="np">Non-Profit Membership, no fee (NP)</option>
@@ -122,17 +122,17 @@
     <!-- MEMBERSHIP CARDS -->
      <section class="membership-card-section">
       <div id="npMemberCard" class="membership-container">
-        <h3>Non-Profit Membership</h3>
+        <h2>Non-Profit Membership</h2>
         <ul></ul>
       </div>
       <div id="bronzeMemberCard" class="membership-container">
-        <h3>Bronze Membership</h3>
+        <h2>Bronze Membership</h2>
       </div>
       <div id="SilverMemberCard" class="membership-container">
-        <h3>Silver Membership</h3>
+        <h2>Silver Membership</h2>
       </div>
       <div id="goldMemberCard" class="membership-container">
-        <h3>Gold Membership</h3>
+        <h2>Gold Membership</h2>
       </div>
      </section>
   </main>
