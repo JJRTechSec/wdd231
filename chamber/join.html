@@ -35,6 +35,7 @@
   <!-- SCRIPTS -->
   <script src="./scripts/chamber.js" defer></script>
   <script src="./scripts/get-dates.js" defer></script>
+  <script src="./data/membership.json" defer></script>
 
 </head>
 
@@ -71,14 +72,14 @@
           <input type="tel" name="phone" title="Your Phone Number" autocomplete="tel" required>
         </label>
         <label>Email<span>*</span>
-          <input type="email" name="email" title="Your Email Address" autocomplete="email" required placeholder="business@email.com">
+          <input type="email" name="email" title="Your Email Address" autocomplete="email" required placeholder="name@business.com">
         </label>
       </fieldset>
       <!-- BUSINESS INFO -->
       <fieldset>
         <legend>Company Info</legend>
         <label>Work Title
-          <input type="text" name="work-title" title="Work Title" autocomplete="organization-title">
+          <input type="text" name="workTitle" title="Work Title" autocomplete="organization-title">
         </label>
         <label>Company Name<span>*</span>
           <input type="text" name="companyName" title="Company Name" autocomplete="organization" required>
@@ -106,10 +107,19 @@
 
     <!-- MEMBERSHIP CARDS -->
      <section class="membership-card-section">
-      <div class="memebrship-container">Non-Profit</div>
-      <div class="memebrship-container">Bronze</div>
-      <div class="memebrship-container">Silver</div>
-      <div class="memebrship-container">Gold</div>
+      <div id="npMemberCard" class="membership-container">
+        <h3>Non-Profit Membership</h3>
+        <ul></ul>
+      </div>
+      <div id="bronzeMemberCard" class="membership-container">
+        <h3>Bronze Membership</h3>
+      </div>
+      <div id="SilverMemberCard" class="membership-container">
+        <h3>Silver Membership</h3>
+      </div>
+      <div id="goldMemberCard" class="membership-container">
+        <h3>Gold Membership</h3>
+      </div>
      </section>
   </main>
   <!-- FOOTER -->
