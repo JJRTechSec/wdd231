@@ -6,3 +6,7 @@ async function getMembershipInfo() {
 };
 
 getMembershipInfo();
+
+const displayMemberInfo = (memberBenefits) {
+
+}

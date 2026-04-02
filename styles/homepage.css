@@ -213,11 +213,6 @@ section button {
   font-weight: 600;
 }
 
-/**************** JOIN ***************/
-.required {
-  color: red;
-}
-
 /************** DIALOG **************/
 dialog {
   display: block;

@@ -265,6 +265,25 @@
     text-decoration: underline;
   }
 
+  /**************** JOIN ****************/
+  .join-main {
+    display: grid;
+    grid-template-columns: 5fr 4fr;
+    column-gap: 5em;
+  }
+
+  .join-main h1 {
+    grid-column: 1 / -1;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  .submit {
+    width: 50%;
+  }
+
   /* FOOTER */
   footer {
     flex-direction: row;

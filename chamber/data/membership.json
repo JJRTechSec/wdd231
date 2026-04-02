@@ -4,25 +4,29 @@
       "name": "Non-Profit Membership",
       "price": 0,
       "currency": "NOK",
-      "billingCycle": "Non-Applicable"
+      "billingCycle": "Non-Applicable",
+      "benefits": []
     },
     {
       "name": "Bronze Membership",
       "price": 1299,
       "currency": "NOK",
-      "billingCycle": "Monthly"
+      "billingCycle": "Monthly",
+      "benefits": []
     },
     {
       "name": "Silver Membership",
       "price": 2499,
       "currency": "NOK",
-      "billingCycle": "Monthly"
+      "billingCycle": "Monthly",
+      "benefits": []
     },
     {
       "name": "Gold Membership",
       "price": 5999,
       "currency": "NOK",
-      "billingCycle": "Monthly"
+      "billingCycle": "Monthly",
+      "benefits": []
     }
   ]
 }

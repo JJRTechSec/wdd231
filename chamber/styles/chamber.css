@@ -295,6 +295,136 @@ figure {
   text-decoration: underline;
 }
 
+/************* JOIN *************/
+.join-main {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.join-main h1 {
+  grid-column: 1 / -1;
+}
+
+form fieldset {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5em;
+  margin-bottom: 1em;
+}
+
+legend {
+  font-weight: 500;
+}
+
+label {
+  width: 100%;
+}
+
+input {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  height: 44px;
+  font-size: 1.2em;
+}
+
+form span {
+  color: red;
+}
+
+select {
+  height: 44px;
+}
+
+textarea {
+  width: 100%;
+  height: 6em;
+}
+
+.submit {
+  margin: 0 auto;
+  height: 48px;
+  font-weight: 500;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-bottom: 2em;
+}
+
+.membership-container {
+  margin: 0.7em 0;
+  border-radius: 6px;
+  height: 5em;
+  padding: 0.3em;
+  position: relative;
+  overflow: hidden;
+}
+
+.membership-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shimmer 12s linear infinite;
+}
+
+.membership-container h2 {
+  font-size: 1.2em;
+  margin-top: 0;
+}
+
+#npMemberCard {
+  background: rgb(131, 241, 245);
+}
+
+#npMemberCard::before {
+  animation-delay: 0s;
+}
+
+#bronzeMemberCard {
+  background-color: rgb(187, 119, 40);
+}
+
+#bronzeMemberCard::before {
+  animation-delay: 3s;
+}
+
+#silverMemberCard {
+  background-color: rgb(175, 175, 175);
+}
+
+#silverMemberCard::before {
+  animation-delay: 6s
+}
+
+#goldMemberCard {
+  background-color: gold;
+}
+
+#goldMemberCard::before {
+  animation-delay: 9s
+}
+
+@keyframes shimmer {
+  0% {
+    left: -150%;
+  }
+  25% {
+    left: 150%;
+  }
+  100% {
+    left: 150%;
+  }
+}
 
 /***************** FOOTER ********************/
 footer {
