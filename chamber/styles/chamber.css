@@ -5,6 +5,7 @@
   --color-four: #a5a5a5;
   --color-five: #0033ab;
   --color-six: #000000;
+  --color-seven: #b70606;
   --rgb-color-one: 22, 61, 150;
   --rgb-color-two: 248, 241, 241;
   --rgb-color-three: 79, 70, 163;
@@ -336,7 +337,7 @@ input {
 }
 
 form span {
-  color: red;
+  color: var(--color-seven);
 }
 
 select {
