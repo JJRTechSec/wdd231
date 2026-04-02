@@ -4,7 +4,7 @@
       "name": "Non-Profit Membership",
       "price": 0,
       "currency": "NOK",
-      "billingCycle": "Non-Applicable",
+      "billingCycle": "Monthly",
       "benefits": [
         "Monthly Networking Events",
         "Listing on our Directory Page",

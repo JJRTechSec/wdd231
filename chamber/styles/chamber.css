@@ -5,6 +5,12 @@
   --color-four: #a5a5a5;
   --color-five: #0033ab;
   --color-six: #000000;
+  --rgb-color-one: 22, 61, 150;
+  --rgb-color-two: 248, 241, 241;
+  --rgb-color-three: 79, 70, 163;
+  --rgb-color-four: 165, 165, 165;
+  --rgb-color-five: 0, 51, 171;
+  --rgb-color-six: 0, 0, 0;
   --font-one: Rubik;
   --font-two: Mulish;
 }
@@ -354,10 +360,12 @@ textarea {
 .membership-container {
   margin: 0.7em 0;
   border-radius: 6px;
-  height: 5em;
-  padding: 0.3em;
+  height: 7em;
+  padding: 0.75em;
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .membership-container::before {
@@ -424,6 +432,33 @@ textarea {
   100% {
     left: 150%;
   }
+}
+
+.learn-more,
+.closeModal {
+  display: block;
+  margin: 0 auto;
+  height: 44px;
+  width: 60%;
+  background-color: var(--color-two);
+  border: 2px solid var(--color-one);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+dialog {
+  background-color: var(--color-three);
+  color: var(--color-two);
+  border: 2px solid var(--color-five);
+  border-radius: 6px;
+  line-height: 1.5em;
+  padding: 1em;
+  max-width: 80vw;
+}
+
+::backdrop {
+  background-color: rgba(var(--rgb-color-two), 0.7);
 }
 
 /***************** FOOTER ********************/
