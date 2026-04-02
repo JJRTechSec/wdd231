@@ -5,28 +5,48 @@
       "price": 0,
       "currency": "NOK",
       "billingCycle": "Non-Applicable",
-      "benefits": []
+      "benefits": [
+        "Monthly Networking Events",
+        "Listing on our Directory Page",
+        "Primary Invitations to Recruitment Fairs"
+      ]
     },
     {
       "name": "Bronze Membership",
       "price": 1299,
       "currency": "NOK",
       "billingCycle": "Monthly",
-      "benefits": []
+      "benefits": [
+        "Monthly Networking Event",
+        "Quarterly Pop-Up Events",
+        "Listing on our Directory Page"
+      ]
     },
     {
       "name": "Silver Membership",
       "price": 2499,
       "currency": "NOK",
       "billingCycle": "Monthly",
-      "benefits": []
+      "benefits": [
+        "Monthly Networking Event",
+        "Quarterly Pop-Up Events",
+        "Listing on our Directory Page",
+        "Spotlight Positioning on our Homepage",
+        "Secondary Priority to Recruitment Fairs"
+      ]
     },
     {
       "name": "Gold Membership",
       "price": 5999,
       "currency": "NOK",
       "billingCycle": "Monthly",
-      "benefits": []
+      "benefits": [
+        "Weekly Networking Event",
+        "Quarterly Pop-Up Events",
+        "Listing on our Directory Page",
+        "Spotlight Positioning on our Homepage",
+        "Primary Invitations to Recruitment Fairs"
+      ]
     }
   ]
 }
