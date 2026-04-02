@@ -7,7 +7,7 @@ document.querySelector('#results').innerHTML = `
 <p>Phone: ${applicationInfo.get('phone')}</p>
 <p>Email: ${applicationInfo.get('email')}</p>
 <p>Work Title: ${applicationInfo.get('workTitle')}</p>
-<p>Comapnay Name: ${applicationInfo.get('companyName')}</p>
+<p>Company Name: ${applicationInfo.get('companyName')}</p>
 <p>Business Description: ${applicationInfo.get('companyDescription')}</p>
 <p>Membership Level: ${applicationInfo.get('membership')}</p>
 <p>Time of Application: ${applicationInfo.get('timestamp')}</p>`

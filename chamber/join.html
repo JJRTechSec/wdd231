@@ -79,7 +79,7 @@
       <fieldset>
         <legend>Company Info</legend>
         <label>Work Title
-          <input type="text" name="workTitle" title="Work Title" autocomplete="organization-title">
+          <input type="text" name="workTitle" title="Work Title (at least 7 characters: letters, spaces, or hyphens)" autocomplete="organization-title" pattern="[A-Za-z\\-\\s]{7,}">
         </label>
         <label>Company Name<span>*</span>
           <input type="text" name="companyName" title="Company Name" autocomplete="organization" required>
@@ -102,20 +102,6 @@
         </label>
       </fieldset>
       <input type="hidden" name="timestamp" id="timestamp">
-      <script>
-        window.addEventListener("load", function() {
-          const now = new Date();
-          const formattedTimestamp = 
-          now.getFullYear() + "-" +
-          String(now.getMonth() + 1).padStart(2, "0") + "-" +
-          String(now.getDate()).padStart(2, "0") + " " +
-          String(now.getHours()).padStart(2, "0") + ":" +
-          String(now.getMinutes()).padStart(2, "0") + ":" +
-          String(now.getSeconds()).padStart(2, "0");
-
-          document.querySelector('#timestamp').value = formattedTimestamp;
-        });
-      </script>
       <input type="submit" value="Join the Chamber" class="submit">
     </form>
 

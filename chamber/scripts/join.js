@@ -8,6 +8,23 @@ const openModal2 = document.querySelector("#openModal2");
 const openModal3 = document.querySelector("#openModal3");
 const openModal4 = document.querySelector("#openModal4");
 
+window.addEventListener("load", function () {
+  const now = new Date();
+  const formattedTimestamp =
+    now.getFullYear() + "-" +
+    String(now.getMonth() + 1).padStart(2, "0") + "-" +
+    String(now.getDate()).padStart(2, "0") + " " +
+    String(now.getHours()).padStart(2, "0") + ":" +
+    String(now.getMinutes()).padStart(2, "0") + ":" +
+    String(now.getSeconds()).padStart(2, "0");
+
+  const timestampField = document.querySelector('#timestamp');
+
+  if (timestampField) {
+    timestampField.value = formattedTimestamp;
+  }
+});
+
 const membershipURL = './data/membership.json';
 async function getMembershipInfo() {
   const response = await fetch(membershipURL);

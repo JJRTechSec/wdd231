@@ -442,6 +442,7 @@ textarea {
   height: 44px;
   width: 60%;
   background-color: var(--color-two);
+  color: var(--color-six);
   border: 2px solid var(--color-one);
   border-radius: 4px;
   cursor: pointer;
