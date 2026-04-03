@@ -464,11 +464,15 @@ dialog {
 }
 
 /*****************DISCOVER ******************/
+#welcomeMessage {
+  padding: 1em;
+}
+
 .activity-grid {
   display: grid;
   justify-items: center;
   row-gap: 2em;
-  margin: 2em 0;
+  margin: 0;
 }
 
 .activity-grid div {

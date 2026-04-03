@@ -312,13 +312,25 @@
 
 /**************** DISCOVER ****************/
 @media only screen and (min-width: 1025px) {
+  #welcomeMessage {
+    margin-left: 1em;
+  }
   .activity-grid {
     grid-template-columns: 1fr 1fr;
     column-gap: 1em;
   }
 
   .activity-grid div {
-    border: 1px solid lime;
-    width: 100%;
+    width: 90%;
+  }
+
+  .activity-grid div img {
+    transition: 1s linear;
+  }
+
+  .activity-grid div img:hover {
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
   }
 }
