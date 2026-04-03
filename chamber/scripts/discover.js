@@ -15,6 +15,7 @@ function displayActivities(activities) {
     activityImg.setAttribute('src', activity.photo_url);
     activityImg.setAttribute('width', 300);
     activityImg.setAttribute('height', 200);
+    activityImg.setAttribute('loading', 'lazy');
     activityFigure.appendChild(activityImg);
     activityAddress.textContent = activity.address;
     activityDescription.textContent = activity.description;
