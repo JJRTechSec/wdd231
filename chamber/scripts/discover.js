@@ -32,3 +32,28 @@ function displayActivities(activities) {
 }
 
 displayActivities(activities);
+
+const welcomeMessageEl = document.querySelector('#welcomeMessage');
+const lastVisit = localStorage.getItem('lastVisit');
+const now = Date.now();
+
+let message = '';
+
+if (!lastVisit) {
+  message = "Welcome! This is your first visit to our site. We're happy you're here!";
+} else {
+  const timeDifference = now - Number(lastVisit);
+  const daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+  if (daysDifference < 1) {
+    message = "Welcome back! You visited within the last 24hrs."
+  } else if (daysDifference >= 1 && daysDifference < 2) {
+    message = "Welcome back! It has been 1 day since your last visit to our site.";
+  } else {
+    message = `Welcome back! It has been ${daysDifference} days since your last visit to our site.`;
+  }
+}
+
+welcomeMessageEl.textContent = message;
+
+localStorage.setItem('lastVisit', now);
