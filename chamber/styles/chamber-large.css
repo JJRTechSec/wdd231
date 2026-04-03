@@ -309,3 +309,16 @@
     width: 75%;
   }
 }
+
+/**************** DISCOVER ****************/
+@media only screen and (min-width: 1025px) {
+  .activity-grid {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+  }
+
+  .activity-grid div {
+    border: 1px solid lime;
+    width: 100%;
+  }
+}

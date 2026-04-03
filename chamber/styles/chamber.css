@@ -463,6 +463,59 @@ dialog {
   background-color: rgba(var(--rgb-color-two), 0.7);
 }
 
+/*****************DISCOVER ******************/
+.activity-grid {
+  display: grid;
+  justify-items: center;
+  row-gap: 2em;
+  margin: 2em 0;
+}
+
+.activity-grid div {
+  display: grid;
+  grid-template-areas:
+    "name"
+    "image"
+    "address"
+    "description"
+    "button";
+  width: 80%;
+}
+
+.activity-grid div h2 {
+  grid-area: name;
+}
+
+.activity-grid div figure {
+  grid-area: image;
+  width: 100%;
+}
+
+.activity-grid div figure img {
+  width: 100%;
+  height: auto;
+}
+
+.activity-grid div address {
+  grid-area: address;
+}
+
+.activity-grid div p {
+  grid-area: description;
+}
+
+.activity-grid div button {
+  margin: 0 auto;
+  grid-area: button;
+  height: 44px;
+  padding: 1em;
+  background-color: var(--color-three);
+  color: var(--color-two);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
 /***************** FOOTER ********************/
 footer {
   display: flex;

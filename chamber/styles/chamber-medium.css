@@ -1,0 +1,23 @@
+@media only screen and (min-width: 641px) {
+  /*****************DISCOVER ******************/
+  .activity-grid div {
+    display: grid;
+    gap: 2em;
+    grid-template-areas:
+      "image name"
+      "image address"
+      "image description"
+      "image button";
+    width: 80%;
+    line-height: 1.5em;
+    row-gap: 0;
+  }
+
+  .activity-grid div figure {
+    width: 300px;
+  }
+
+  .activity-grid div figure img {
+    height: 200px;
+  }
+}

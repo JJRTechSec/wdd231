@@ -213,7 +213,7 @@ section button {
   font-weight: 600;
 }
 
-/************** DIALOG **************/
+/************** JOIN DIALOG **************/
 dialog {
   display: block;
   background-color: var(--color-two);

@@ -9,6 +9,7 @@ function displayActivities(activities) {
     const activityAddress = document.createElement('address');
     const activityDescription = document.createElement('p');
     const activityContainer = document.createElement('div');
+    const learnMoreBtn = document.createElement('button');
 
     activityName.textContent = activity.name;
     activityImg.setAttribute('src', activity.photo_url);
@@ -17,13 +18,15 @@ function displayActivities(activities) {
     activityFigure.appendChild(activityImg);
     activityAddress.textContent = activity.address;
     activityDescription.textContent = activity.description;
+    learnMoreBtn.textContent = "Learn More";
 
     activityContainer.appendChild(activityName);
+    activityContainer.appendChild(activityAddress);
+    activityContainer.appendChild(activityDescription);
+    activityContainer.appendChild(activityFigure);
+    activityContainer.appendChild(learnMoreBtn);
     
     grid.appendChild(activityContainer);
-    grid.appendChild(activityAddress);
-    grid.appendChild(activityDescription);
-    grid.appendChild(activityFigure);
     console.log(activity);
   });
 }
