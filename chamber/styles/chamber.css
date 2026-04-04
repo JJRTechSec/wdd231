@@ -35,6 +35,11 @@ body {
   overflow-x: hidden;
 }
 
+button,
+.button {
+  cursor: pointer;
+}
+
 /***************** HEADER ********************/
 header {
   display: flex;
@@ -53,6 +58,7 @@ header {
 
 header img {
   width: 44px;
+  height: 100%;
   flex: 0.5;
 }
 
@@ -167,7 +173,6 @@ main h2 {
 
 .call-to-actionbtn {
   width: 70%;
-  cursor: pointer;
   background-color: var(--color-three);
   border: none;
   border-radius: 6px;
@@ -310,7 +315,8 @@ figure {
 }
 
 .join-main h1 {
-  grid-column: 1 / -1;
+  text-align: center;
+  text-wrap: balance;
 }
 
 form fieldset {
@@ -354,7 +360,6 @@ textarea {
   height: 48px;
   font-weight: 500;
   font-size: 1.2em;
-  cursor: pointer;
   margin-bottom: 2em;
 }
 
@@ -445,7 +450,6 @@ textarea {
   color: var(--color-six);
   border: 2px solid var(--color-one);
   border-radius: 4px;
-  cursor: pointer;
   font-weight: 500;
 }
 
@@ -517,7 +521,6 @@ dialog {
   color: var(--color-two);
   border-radius: 4px;
   border: none;
-  cursor: pointer;
 }
 
 /***************** FOOTER ********************/

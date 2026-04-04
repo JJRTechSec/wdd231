@@ -12,11 +12,6 @@
     padding: 0;
   }
 
-  header img {
-    width: 44px;
-    height: 100%;
-  }
-
   header span {
     flex: 3;
     height: 100%;
@@ -44,7 +39,6 @@
 
   nav ul {
     flex-direction: row;
-    width: 100%;
     margin: 0;
     height: 100%;
     padding: 0;
@@ -61,10 +55,8 @@
   /**************** MAIN *******************/
 
   main {
-    flex: 1;
     align-items: stretch;
     column-gap: 1em;
-    margin: 4em 0 0 0;
   }
 
   .directory-main {
@@ -88,7 +80,6 @@
   }
 
   .hero {
-    width: 100%;
     height: 60vh;
   }
 
@@ -104,9 +95,6 @@
   .call-to-actionbtn {
     width: 33%;
     padding: 0.5em 0;
-    font-size: 1em;
-    font-weight: 600;
-    cursor: pointer;
     margin: 0 auto;
     left: 33%;
   }
@@ -160,7 +148,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   border: none;
   background-color: var(--color-two);
   display: inline-block;
@@ -182,24 +169,13 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
     gap: 1em;
-    width: 100%;
-    padding: 6px;
     margin: 0;
     align-items: stretch;
   }
 
   .card {
-    display: grid;
     grid-template-columns: 160px 2fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    column-gap: 10px;
-    width: 100%;
     height: 100%;
-    margin: 1em 0;
-    background-color: var(--color-three);
-    color: var(--color-two);
-    border-radius: 6px;
-    padding: 0 10px;
   }
 
   .cards.list {
@@ -224,45 +200,8 @@
     display: none;
   }
 
-  .business-name,
-  .slogan {
-    width: 100%;
-    grid-column: 1 / -1;
-    text-align: center;
-  }
-
-  .business-name {
-    font-size: 1em;
-  }
-
-  .card .slogan {
-    font-size: 0.8em;
-    word-break: break-word;
-    border-bottom: 1px solid var(--color-two);
-    padding-bottom: 2.5em;
-  }
-
-  .card span {
-    padding: 0;
-    height: 2em;
-  }
-
   .logo {
     width: 160px;
-    grid-row: 3 / 6;
-  }
-
-  .company-info {
-    grid-column: 2 / 3;
-    align-items: center;
-    font-size: 0.8em;
-    width: 100%;
-    word-break: break-word;
-    color: var(--color-two);
-  }
-
-  .website {
-    text-decoration: underline;
   }
 
   /**************** JOIN ****************/
@@ -273,6 +212,7 @@
   }
 
   .join-main h1 {
+    margin: 3em 0 1em 0;
     grid-column: 1 / -1;
   }
 
@@ -284,10 +224,35 @@
     width: 50%;
   }
 
+  /**************** DISCOVER ****************/
+  @media only screen and (min-width: 1025px) {
+    #welcomeMessage {
+      margin-left: 1em;
+    }
+
+    .activity-grid {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1em;
+    }
+
+    .activity-grid div {
+      width: 90%;
+    }
+
+    .activity-grid div img {
+      transition: 1s linear;
+    }
+
+    .activity-grid div img:hover {
+      width: 350px;
+      height: 250px;
+      border-radius: 10px;
+    }
+  }
+
   /* FOOTER */
   footer {
     flex-direction: row;
-    justify-content: start;
     font-size: 1em;
     line-height: 0;
     margin-top: 3em;
@@ -307,30 +272,5 @@
   .footer-left p,
   .footer-right p {
     width: 75%;
-  }
-}
-
-/**************** DISCOVER ****************/
-@media only screen and (min-width: 1025px) {
-  #welcomeMessage {
-    margin-left: 1em;
-  }
-  .activity-grid {
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1em;
-  }
-
-  .activity-grid div {
-    width: 90%;
-  }
-
-  .activity-grid div img {
-    transition: 1s linear;
-  }
-
-  .activity-grid div img:hover {
-    width: 350px;
-    height: 250px;
-    border-radius: 10px;
   }
 }
