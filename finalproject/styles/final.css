@@ -1,0 +1,27 @@
+:root {
+  --light-blue: #009cde;
+  --light-blue-rgb: rgb(0, 156, 222);
+  --darker-blue: #004f71;
+  --darker-blue-rgb: rgb(0, 79, 113);
+  --font-1: helvetica sans-serif;
+}
+
+* {
+  font-family: var(--font-1);
+}
+
+.color1 {
+  color: var(--light-blue);
+  background-color: #000;
+  font-size: 1.2em;
+}
+
+.color2 {
+  color: var(--darker-blue);
+  background-color: #00ffe1;
+  font-size: 1.2em;
+}
+
+.roman {
+  list-style-type: lower-roman;
+}
