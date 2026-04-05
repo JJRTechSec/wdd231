@@ -463,9 +463,9 @@ dialog {
   max-width: 80vw;
 }
 
-::backdrop {
+/*::backdrop {
   background-color: rgba(var(--rgb-color-two), 0.7);
-}
+}*/
 
 /*****************DISCOVER ******************/
 #welcomeMessage {
@@ -497,9 +497,6 @@ dialog {
 .activity-grid div figure {
   grid-area: image;
   width: 100%;
-}
-
-.activity-grid div figure img {
 }
 
 .activity-grid div address {

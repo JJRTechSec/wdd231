@@ -226,6 +226,10 @@
 
   /**************** DISCOVER ****************/
   @media only screen and (min-width: 1025px) {
+    .discover-title {
+      margin: 3em 0 0 1em;
+    }
+
     #welcomeMessage {
       margin-left: 1em;
     }
