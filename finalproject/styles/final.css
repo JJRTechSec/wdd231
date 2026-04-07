@@ -4,6 +4,7 @@
   --darker-blue: #004f71;
   --darker-blue-rgb: rgb(0, 79, 113);
   --font-1: helvetica sans-serif;
+  --required: #940016;
 }
 
 * {
@@ -24,4 +25,8 @@
 
 .roman {
   list-style-type: lower-roman;
+}
+
+.required {
+  color: var(--required);
 }

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!--***************** TITLE *****************-->
-    <title>The Marathon Guidebook</title>
+    <title>Newsletter Signup for The Marathon Guidebook</title>
 
     <!--***************** META *****************-->
     <meta name="description" content="WDD231 - ">
@@ -27,8 +27,8 @@
 
     <!--***************** STYLES *****************-->
     <link rel="stylesheet" href="./styles/final.css">
-    <link rel="stylesheet" href="./styles/final-medium.css">
-    <link rel="stylesheet" href="./styles/final-large.css">
+    <!--<link rel="stylesheet" href="./styles/final-medium.css">
+    <link rel="stylesheet" href="./styles/final-large.css">-->
 
     <!--***************** SCRIPTS *****************-->
   </head>
@@ -49,7 +49,43 @@
 
     <!--***************** MAIN *****************-->
     <main>
+      <h1>The Marathon Guidebook Newsletter</h1>
+      <p>Sign up to stay updated about the latest race information, shoe and kit sales/news, giveaways and more!</p>
 
+      <form method="GET" action="thankyou.html">
+        <fieldset>
+          <legend>Personal Details</legend>
+          <label>Your Name<span class="required">*</span><input type="text" name="first" id="first" autocomplete="given-name" required></label>
+          <label>Email<span class="required">*</span><input type="email" name="email" id="email" placeholder="name@company.com" autocomplete="email" required></label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Select your Newsletter Preferences</legend>
+          <p>Check each box you wish to receive newsletters about:</p>
+          <label for="majors">
+            <input type="checkbox" id="majors" name="majors" class="checkbox" value="Selected">Majors
+          </label>
+          <label for="destination">
+            <input type="checkbox" id="destination" name="destination" class="checkbox" value="Selected">Destination Races
+          </label>
+          <label for="fueling">
+            <input type="checkbox" id="fueling" name="fueling" class="checkbox">Fueling and Nutrition
+          </label>
+          <label for="training">
+            <input type="checkbox" id="training" name="training" class="checkbox">Training Sessions/Tips
+          </label>
+          <label for="kit">
+            <input type="checkbox" id="kit" name="kit-and-shoes" class="checkbox">Kit/Shoe Discounts/News
+          </label>
+          <label for="competition">
+            <input type="checkbox" id="competition" name="competition" class="checkbox">Giveaways and Competitions
+          </label>
+          <label for="all">
+            <input type="checkbox" id="all" name="all">All of the Above
+          </label>
+        </fieldset>
+        <input type="submit" value="Sign Up">
+      </form>
     </main>
 
     <!--***************** FOOTER *****************-->
