@@ -98,7 +98,7 @@ export const marathons = [
       "year": 2023
     },
     "female_course_record": {
-      "time": "2:13:44",
+      "time": "2:09:56",
       "athlete": "Ruth Chepngetich",
       "year": 2024
     },
