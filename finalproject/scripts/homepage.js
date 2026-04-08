@@ -11,6 +11,10 @@ const totalParticipants = document.querySelector('#totalParticipants');
 const currentWeather = document.querySelector('#currentWeather');
 const apiKey = '457b7803269547921713e765a31713ae';
 
+/*const allraces = document.querySelector('#allRaces');
+const majorRaces = document.querySelector('#majorRaces');
+const destinationRaces = document.querySelector('#destinationRaces');*/
+
 closeModal.addEventListener('click', () => modal.close());
 
 //raceName.textContent = marathons[0].races[0].name;
