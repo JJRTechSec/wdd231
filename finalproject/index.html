@@ -32,6 +32,7 @@
 
     <!--***************** SCRIPTS *****************-->
     <script src="./scripts/homepage.js" type="module"></script>
+    <script src="./scripts/getDates.js" defer></script>
   </head>
 
   <body>
@@ -66,9 +67,10 @@
       <div id="raceDisplay" class="race-display"></div>
       <dialog id="modal" class="modal">
         <p id="modalTitle"></p>
-        <p id=""></p>
-        <p id=""></p>
-        <p id=""></p>
+        <p id="whenMajor"></p>
+        <p id="firstHeld"></p>
+        <p id="totalParticipants"></p>
+        <p id="currentWeather"></p>
         <button id="closeModal">Close</button>
       </dialog>
     </main>
@@ -83,7 +85,9 @@
         <p>Newsletter</p>
       </div>
       <!--***************** FOOTER MIDDLE *****************-->
-      <div class="footer-middle">&copy;Joseph Jameson-Rickard 2026</div>
+      <div class="footer-middle">
+        <p>&copy;<span id="currentYear"></span> Joseph Jameson-Rickard</p>
+      </div>
 
       <!--***************** FOOTER RIGHT *****************-->
       <div class="footer-right">

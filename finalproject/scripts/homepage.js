@@ -1,7 +1,15 @@
 import { marathons } from "../data/marathons.mjs";
+import { displayYear } from "./getDates.mjs";
+
 const raceDisplay = document.querySelector('#raceDisplay');
 const modal = document.querySelector('#modal');
 const closeModal = document.querySelector('#closeModal');
+const modalTitle = document.querySelector('#modalTitle');
+const whenMajor = document.querySelector('#whenMajor');
+const firstHeld = document.querySelector('#firstHeld');
+const totalParticipants = document.querySelector('#totalParticipants');
+const currentWeather = document.querySelector('#currentWeather');
+const apiKey = '457b7803269547921713e765a31713ae';
 
 closeModal.addEventListener('click', () => modal.close());
 
@@ -26,10 +34,11 @@ const displayMarathons = ((marathons) => {
     card.appendChild(raceDate);
     card.appendChild(maleRecord);
     card.appendChild(femaleRecord);
+
     card.addEventListener('click', () => {
       displayModal(marathon);
-      console.log('try again');
-     });
+    });
+    
     raceDisplay.appendChild(card);
   })
 });
@@ -37,26 +46,43 @@ const displayMarathons = ((marathons) => {
 displayMarathons(marathons);
 
 function displayModal(marathon) {
-    const firstHeld = document.createElement('p');
-    const totalParticipants = document.createElement('p');
-    const marathonMajor = document.createElement('p');
+  modalTitle.textContent = marathon.name;
+  firstHeld.innerHTML = `<strong>First Held</strong>:${marathon.first_held}`;
+  totalParticipants.innerHTML = `<strong>Participants in 2025</strong>: ${marathon.participants_2025}`;
+  whenMajor.textContent = '';
 
-    const latitude = marathon.latitude;
-    const longitude = marathon.longitude;
-    const weatherUrl = '';
-    firstHeld.innerHTML = `<strong>First Held</strong>:${marathon.first_held}`;
-    totalParticipants.innerHTML = `<strong>Participants Last Year</strong>:${marathon.participants_2025}`;
-    marathonMajor.textContent = '';
+  const lat = marathon.latitude;
+  const long = marathon.longitude;
+  const weatherUrl = `https://api.openweathermap.org/data/2.5/weather/?lat=${lat}&lon=${long}&cnt=30&units=metric&appid=${apiKey}`;
 
-    if (marathon.type === 'major') {
-      marathonMajor.textContent = `Became a Marathon Major in: ${marathon.became_major}`;
-    } else {
-      marathonMajor.style.display = "hidden";
-    };
-    
-    modal.appendChild(firstHeld);
-  modal.appendChild(marathonMajor);
+  async function weatherApiFetch() {
+    try {
+      const response = await fetch(weatherUrl);
+      if (response.ok) {
+        const data = await response.json();
+        displayWeather(data);
+        console.log(data);
+      } else {
+        throw Error(await response.text());
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
+  weatherApiFetch();
 
-    modal.showModal();
+  if (marathon.type === 'major') {
+    whenMajor.innerHTML = `<strong>Became a Marathon Major in</strong>: ${marathon.became_major}`;
+  } else {
+    whenMajor.style.display = "hidden";
+  };
+
+  modal.showModal();
 }
+
+function displayWeather(data) {
+  currentWeather.innerHTML = `<strong>Current Weather</strong>: ${data.main.temp.toFixed(0)}&deg;C, ${data.weather[0].description}`;
+}
+
+displayYear();
