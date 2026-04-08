@@ -1,3 +1,5 @@
+import { displayYear } from './getDates.mjs';
+
 const newsletterInfo = new URLSearchParams(window.location.search);
 console.log(newsletterInfo);
 
@@ -11,11 +13,24 @@ const trainingResult = document.querySelector('#trainingResult');
 const kitResult = document.querySelector('#kitResult');
 const competitionResult = document.querySelector('#competitionResult');
 
-nameResult.textContent = `${newsletterInfo.get('first')}`;
-emailResult.textContent = `${ newsletterInfo.get('email')}`;
-majorsResult.textContent = `${newsletterInfo.get('majors')}`;
-destinationResult.textContent = `${ newsletterInfo.get('destination')}`;
-fuelingResult.textContent = `${newsletterInfo.get('fueling')}`;
-trainingResult.textContent = `${newsletterInfo.get('training')}`;
-kitResult.textContent = `${newsletterInfo.get('kit-and-shoes')}`
-competitionResult.textContent = `${newsletterInfo.get('competition')}`;
+nameResult.innerHTML = `<strong>Your Name</strong>: ${newsletterInfo.get('first')}`;
+emailResult.innerHTML = `<strong>Your email</strong>: ${newsletterInfo.get('email')}`;
+majorsResult.innerHTML = `<strong>Majors News</strong>: ${getValue('majors')}`;
+destinationResult.innerHTML = `<strong>Destination Race News</strong>: ${getValue('destination')}`;
+fuelingResult.innerHTML = `<strong>Fueling/Nutrition tips</strong>: ${getValue('fueling')}`;
+trainingResult.innerHTML = `<strong>Training Sessions/Tips</strong>: ${getValue('training')}`;
+kitResult.innerHTML = `<strong>Kit/Shoes News/Discounts</strong>: ${getValue('kit-and-shoes')}`;
+competitionResult.innerHTML = `<strong>Competitions/Giveaways</strong>: ${getValue('competition')}`;
+
+// Return 'Not Selected' instead of null
+function getValue(name) {
+  let value = newsletterInfo.get(name);
+  if (value === null) {
+    return 'Not Selected';
+  } else {
+    return value;
+  }
+}
+
+// display year in footer
+displayYear();
