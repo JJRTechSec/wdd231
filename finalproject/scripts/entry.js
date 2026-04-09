@@ -11,19 +11,33 @@ const displayEntryInfo = ((entryInfo) => {
     const raceName = document.createElement('p');
     const entryListTitle = document.createElement('p');
     const entryTypeList = document.createElement('ul');
-    const entryType = document.createElement('li');
+    //const entryType = document.createElement('li');
     const priceListTitle = document.createElement('p');
     const priceList = document.createElement('ul');
-    const price = document.createElement('li');
 
     raceName.textContent = race.name;
     entryListTitle.textContent = 'Entry Types';
     priceListTitle.textContent = 'Price Information';
 
-    
+    // create entry type list
+    Object.entries(race.type_of_entry).forEach(([key, value]) => {
+      const entryType = document.createElement('li');
+      const displayValue = value === true ? 'Yes' : 'No';
 
-    entryTypeList.appendChild(entryType);
-    priceList.appendChild(price);
+      entryType.innerHTML = `<strong>${key}</strong>: ${displayValue}`;
+      entryTypeList.appendChild(entryType);
+    });
+
+    // create price list
+    Object.entries(race.price).forEach(([key, priceObject]) => {
+      const price = document.createElement('li');
+
+      const localPrice = priceObject.Local;
+      const internationalPrice = priceObject.International;
+
+      price.innerHTML = `<strong>${key}</strong>: Local: ${localPrice} | Internationals: ${internationalPrice}`;
+      priceList.appendChild(price);
+    });
 
     card.appendChild(raceName);
     card.appendChild(entryListTitle);
@@ -35,5 +49,11 @@ const displayEntryInfo = ((entryInfo) => {
 })
 
 displayEntryInfo(entryInfo);
+
+/**function displayEntryTypeList(entryInfo) {
+  entryInfo.forEach((), function() {
+    console.log('hello');
+  })
+}*/
 
 displayYear();
