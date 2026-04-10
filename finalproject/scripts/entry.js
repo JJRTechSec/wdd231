@@ -14,11 +14,12 @@ const displayEntryInfo = ((entryInfo) => {
     const card = document.createElement('section');
     card.classList.add('card');
 
-    const raceName = document.createElement('p');
-    const entryListTitle = document.createElement('p');
+    const raceName = document.createElement('h2');
+    
+    const entryListTitle = document.createElement('h3');
     const entryTypeList = document.createElement('ul');
-    //const entryType = document.createElement('li');
-    const priceListTitle = document.createElement('p');
+
+    const priceListTitle = document.createElement('h3');
     const priceList = document.createElement('ul');
 
     raceName.textContent = race.name;
