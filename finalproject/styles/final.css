@@ -208,7 +208,8 @@ main h1 {
 }
 
 /************* NEWSLETTER *************/
-.main-newsletter {
+.main-newsletter,
+.main-thankyou {
   padding: 0 10px;
 }
 .newsletter-p {
