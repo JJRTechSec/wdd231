@@ -2,6 +2,12 @@ import { displayYear } from './getDates.mjs';
 
 const newsletterInfo = new URLSearchParams(window.location.search);
 console.log(newsletterInfo);
+const hamburger = document.querySelector('.hamburger');
+const navigation = document.querySelector('.navigation');
+
+hamburger.addEventListener('click', function () {
+  navigation.classList.toggle('show');
+});
 
 /*********** RESULTS **********/
 const nameResult = document.querySelector('#nameResult');

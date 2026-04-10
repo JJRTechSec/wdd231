@@ -2,6 +2,12 @@ import { entryInfo } from '../data/entryInfo.mjs';
 import { displayYear } from './getDates.mjs';
 
 const entryDisplay = document.querySelector('#majorEntryDisplay');
+const hamburger = document.querySelector('.hamburger');
+const navigation = document.querySelector('.navigation');
+
+hamburger.addEventListener('click', function () {
+  navigation.classList.toggle('show');
+});
 
 const displayEntryInfo = ((entryInfo) => {
   entryInfo.forEach((race) => {

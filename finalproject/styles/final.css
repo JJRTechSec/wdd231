@@ -9,9 +9,24 @@
 
 * {
   font-family: var(--font-1);
+  box-sizing: border-box;
 }
 
-.color1 {
+body,
+html {
+  margin: 0;
+  height: 100%;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/*.color1 {
   color: var(--light-blue);
   background-color: #000;
   font-size: 1.2em;
@@ -25,8 +40,86 @@
 
 .roman {
   list-style-type: lower-roman;
-}
+}*/
 
 .required {
   color: var(--required);
+}
+
+header {
+  display: flex;
+  height: 4em;
+  background-color: var(--light-blue);
+  color: #fff;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  width: 44px;
+}
+
+header span {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
+.hamburger {
+  position: absolute;
+  right: 1em;
+}
+
+.hamburger::before {
+  content: '\2630';
+  font-size: 2em;
+  cursor: pointer;
+}
+
+.hamburger.show::before {
+  content: '\00d7';
+}
+
+.navigation {
+  display: none;
+  /*right: -10em;
+  top: 3.5em;
+  transition: 1s;*/
+}
+
+.navigation.show {
+  position: absolute;
+  display: block;
+  border: 1px solid var(--darker-blue);
+  top: 3.5em;
+  right: 0;
+  width: 50%;
+  height: auto;
+  background-color: var(--darker-blue);
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid lime;
+}
+
+.navigation li {
+  border: 1px solid skyblue;
+  width: 100%;
+  padding: 1em 0;
+}
+
+.navigation li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  width: 100%;
+  border: 1px solid red;
+}
+
+.hero {
+  width: 100%;
 }

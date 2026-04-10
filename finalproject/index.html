@@ -21,14 +21,14 @@
     <meta property="og:site_name" content="Joseph Jameson-Rickard">
 
     <!--***************** FAVICON *****************-->
-    <link rel="icon" href="">
+    <link rel="icon" href="./images/logo-blue.svg" class="icon">
 
     <!--***************** FONTS *****************-->
 
     <!--***************** STYLES *****************-->
-    <!--<link rel="stylesheet" href="./styles/final.css">
+    <link rel="stylesheet" href="./styles/final.css">
     <link rel="stylesheet" href="./styles/final-medium.css">
-    <link rel="stylesheet" href="./styles/final-large.css">-->
+    <link rel="stylesheet" href="./styles/final-large.css">
 
     <!--***************** SCRIPTS *****************-->
     <script src="./scripts/homepage.js" type="module"></script>
@@ -37,8 +37,9 @@
   <body>
     <!--***************** HEADER *****************-->
     <header>
-      <img src="" alt="The Marathon Guidebook Logo.">
+      <img src="./images/logo-black.svg" alt="The Marathon Guidebook Logo." class="header-logo">
       <span>The Marathon Guidebook</span>
+      <button id="navButton" class="hamburger" aria-label="navigation"></button>
       <nav class="navigation">
         <ul>
           <li class="current"><a class="current" href="index.html">Home</a></li>
@@ -51,9 +52,9 @@
     <!--***************** MAIN *****************-->
     <main>
       <picture class="hero">
-        <source srcset="" media="(min-width: 1000px)">
-        <source srcset="" media="(min-width: 750px)">
-        <img src="" alt="Image of marathon runners at the Marathon">
+        <source srcset="./images/hero.webp" media="(min-width: 1000px)">
+        <source srcset="./images/hero-medium.webp" media="(min-width: 750px)">
+        <img src="./images/hero-small.webp" alt="Image of marathon runners at the Marathon">
       </picture>
       <a class="button ctaBtn">Sign Up to our Newsletter</a>
 

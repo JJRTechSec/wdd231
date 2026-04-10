@@ -10,14 +10,14 @@ const firstHeld = document.querySelector('#firstHeld');
 const totalParticipants = document.querySelector('#totalParticipants');
 const currentWeather = document.querySelector('#currentWeather');
 const apiKey = '457b7803269547921713e765a31713ae';
+const hamburger = document.querySelector('.hamburger');
+const navigation = document.querySelector('.navigation');
 
-/*const allraces = document.querySelector('#allRaces');
-const majorRaces = document.querySelector('#majorRaces');
-const destinationRaces = document.querySelector('#destinationRaces');*/
+hamburger.addEventListener('click', function () {
+  navigation.classList.toggle('show');
+});
 
 closeModal.addEventListener('click', () => modal.close());
-
-//raceName.textContent = marathons[0].races[0].name;
 
 const displayMarathons = ((marathons) => {
   marathons.forEach((marathon) => {

@@ -2,6 +2,12 @@ import { displayYear } from './getDates.mjs';
 
 const all = document.querySelector('#all');
 const newsletterPreferences = document.querySelectorAll('.checkbox');
+const hamburger = document.querySelector('.hamburger');
+const navigation = document.querySelector('.navigation');
+
+hamburger.addEventListener('click', function () {
+  navigation.classList.toggle('show');
+});
 
 all.addEventListener('change', () => {
   newsletterPreferences.forEach((checkbox) => {
