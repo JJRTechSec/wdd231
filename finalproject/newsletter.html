@@ -50,20 +50,22 @@
     </header>
 
     <!--***************** MAIN *****************-->
-    <main>
+    <main class="main-newsletter">
       <h1>The Marathon Guidebook Newsletter</h1>
-      <p>Sign up to stay updated about the latest race information, shoe and kit sales/news, giveaways and more!</p>
+      <p class="newsletter-p">Sign up to stay updated about the latest race information, shoe and kit sales/news, giveaways and more!</p>
 
       <form method="GET" action="thankyou.html">
-        <fieldset>
+        <fieldset class="personal-info-fieldset">
           <legend>Personal Details</legend>
-          <label>Your Name<span class="required">*</span><input type="text" name="first" id="first" autocomplete="given-name" required></label>
-          <label>Email<span class="required">*</span><input type="email" name="email" id="email" placeholder="name@company.com" autocomplete="email" required></label>
+          <label for="first">Your Name<span class="required">*</span></label>
+          <input type="text" name="first" id="first" autocomplete="given-name" required>
+          <label for="email">Email<span class="required">*</span></label>
+          <input type="email" name="email" id="email" placeholder="name@company.com" autocomplete="email" required>
         </fieldset>
 
         <fieldset>
           <legend>Select your Newsletter Preferences</legend>
-          <p>Check each box you wish to receive newsletters about:</p>
+          <p class="preference-title">Check each box you wish to receive newsletters about:</p>
           <label for="majors">
             <input type="checkbox" id="majors" name="majors" class="checkbox" value="Selected">Majors
           </label>
@@ -86,7 +88,7 @@
             <input type="checkbox" id="all" name="all" class="checkbox">All of the Above
           </label>
         </fieldset>
-        <input type="submit" value="Sign Up">
+        <input type="submit" value="Sign Up" class="button">
       </form>
     </main>
 

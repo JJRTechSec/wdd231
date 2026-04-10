@@ -82,7 +82,7 @@ header span {
   width: 60%;
   transition: 1s;
   animation-name: menuIn;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-timing-function: ease-out;
 }
 
@@ -207,11 +207,47 @@ main h1 {
   margin: 1em 10px;
 }
 
-/************* ENTRY INFO *************/
-.majorEntryDisplay {
-  
+/************* NEWSLETTER *************/
+.main-newsletter {
+  padding: 0 10px;
+}
+.newsletter-p {
+  margin: 0 auto;
+  text-align: left;
 }
 
+form {
+  margin: 1em 0;
+  display: grid;
+  row-gap: 1em;
+}
+
+form .button {
+  font-weight: 600;
+  font-size: 1.5em;
+  width: 60%;
+  margin: 0 auto;
+}
+
+fieldset {
+  display: grid;
+  line-height: 2;
+}
+
+legend {
+  font-size: 1.1em;
+}
+
+.preference-title {
+  font-weight: 600;
+}
+
+.personal-info-fieldset {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1px;
+  row-gap: 10px;
+}
 
 /************* FOOTER **************/
 footer {
