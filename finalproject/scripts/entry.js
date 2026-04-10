@@ -12,7 +12,7 @@ hamburger.addEventListener('click', function () {
 const displayEntryInfo = ((entryInfo) => {
   entryInfo.forEach((race) => {
     const card = document.createElement('section');
-    card.style.border = "1px solid black";
+    card.classList.add('card');
 
     const raceName = document.createElement('p');
     const entryListTitle = document.createElement('p');

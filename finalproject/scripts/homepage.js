@@ -14,6 +14,7 @@ const hamburger = document.querySelector('.hamburger');
 const navigation = document.querySelector('.navigation');
 
 hamburger.addEventListener('click', function () {
+  hamburger.classList.toggle('show');
   navigation.classList.toggle('show');
 });
 
@@ -22,7 +23,7 @@ closeModal.addEventListener('click', () => modal.close());
 const displayMarathons = ((marathons) => {
   marathons.forEach((marathon) => {
     const card = document.createElement('section');
-    card.style.border = "1px solid black";
+    card.classList.add('card');
 
     const raceName = document.createElement('h3');
     const raceDate = document.createElement('p');

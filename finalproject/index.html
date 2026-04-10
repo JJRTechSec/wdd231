@@ -50,19 +50,21 @@
     </header>
 
     <!--***************** MAIN *****************-->
-    <main>
+    <main class="main-home">
       <picture class="hero">
         <source srcset="./images/hero.webp" media="(min-width: 1000px)">
         <source srcset="./images/hero-medium.webp" media="(min-width: 750px)">
-        <img src="./images/hero-small.webp" alt="Image of marathon runners at the Marathon">
+        <img src="./images/hero-small.webp" alt="Image of marathon runners at the London Marathon start line.">
+        <a class="button ctaBtn">Sign Up to our Newsletter</a>
       </picture>
-      <a class="button ctaBtn">Sign Up to our Newsletter</a>
 
       <h1>The Marathon Guidebook</h1>
       <h2>Filter the marathons you wish to see:</h2>
-      <button id="allRaces" class="currentRaceDisplay"></button>
-      <button id="majorRaces"></button>
-      <button id="destinationRaces"></button>
+      <div class="display-buttons">
+        <button id="allRaces" class="currentRaceDisplay">All</button>
+        <button id="majorRaces">Majors</button>
+        <button id="destinationRaces">Experience</button>
+      </div>
 
       <div id="raceDisplay" class="race-display"></div>
       <dialog id="modal" class="modal">
@@ -91,7 +93,7 @@
 
       <!--***************** FOOTER RIGHT *****************-->
       <div class="footer-right">
-        <a href="">External Links</a>
+        <p>External Links</p>
         <a href="">Attributions</a>
         <a href="">Video Link</a>
       </div>
