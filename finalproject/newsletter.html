@@ -27,8 +27,8 @@
 
     <!--***************** STYLES *****************-->
     <link rel="stylesheet" href="./styles/final.css">
-    <!--<link rel="stylesheet" href="./styles/final-medium.css">
-    <link rel="stylesheet" href="./styles/final-large.css">-->
+    <link rel="stylesheet" href="./styles/final-medium.css">
+    <link rel="stylesheet" href="./styles/final-large.css">
 
     <!--***************** SCRIPTS *****************-->
     <script src="./scripts/newsletter.js" type="module"></script>
@@ -57,13 +57,13 @@
       <form method="GET" action="thankyou.html">
         <fieldset class="personal-info-fieldset">
           <legend>Personal Details</legend>
-          <label for="first">Your Name<span class="required">*</span></label>
-          <input type="text" name="first" id="first" autocomplete="given-name" required>
-          <label for="email">Email<span class="required">*</span></label>
-          <input type="email" name="email" id="email" placeholder="name@company.com" autocomplete="email" required>
+          <label for="first" class="nameLabel">Your Name<span class="required">*</span></label>
+          <input type="text" name="first" id="first" autocomplete="given-name" required class="nameInput">
+          <label for="email" class="emailLabel">Email<span class="required">*</span></label>
+          <input type="email" name="email" id="email" placeholder="name@company.com" autocomplete="email" required class="emailInput">
         </fieldset>
 
-        <fieldset>
+        <fieldset class="preference-fieldset">
           <legend>Select your Newsletter Preferences</legend>
           <p class="preference-title">Check each box you wish to receive newsletters about:</p>
           <label for="majors">

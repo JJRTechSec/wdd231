@@ -1,6 +1,7 @@
 @media only screen and (min-width: 1000px) {
   header {
     display: flex;
+    min-height: 4em;
   }
 
   header span {
@@ -19,13 +20,15 @@
     top: 0;
     right: 0;
     background-color: var(--darker-blue);
+    height: 100%;
   }
 
   .navigation ul {
     flex-direction: row;
   }
 
-  .navigation a {
+  .navigation li {
+    height: 100%;
   }
 
   .main-home {
@@ -50,12 +53,32 @@
     margin: 1.5em;
   }
 
-  .race-display {
+  .race-display,
+  #majorEntryDisplay {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     margin: 1em;
+    line-height: 1.3;
   }
+
+  /*************** NEWSLETTER **************/
+  .personal-info-fieldset {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personal-info-fieldset input {
+    width: 50%;
+  }
+
+  /************* THANK YOU *************/
+  .main-thankyou {
+    width: 100%;
+    padding: 1em;
+  }
+
+  /*************** FOOTER **************/
 
   footer {
     display: flex;
