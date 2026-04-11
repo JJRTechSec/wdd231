@@ -264,8 +264,13 @@ legend {
 /************* FOOTER **************/
 footer {
   background-color: var(--light-blue);
-  display: grid;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
   padding: 10px;
+  text-align: left;
 }
 
 .footer-left,
@@ -274,6 +279,7 @@ footer {
   display: grid;
   align-items: center;
   color: black;
+  width: 100%;
 }
 
 .footer-middle p {

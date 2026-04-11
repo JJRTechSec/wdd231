@@ -7,6 +7,7 @@ const navigation = document.querySelector('.navigation');
 
 hamburger.addEventListener('click', function () {
   navigation.classList.toggle('show');
+  hamburger.classList.toggle('show');
 });
 
 const displayEntryInfo = ((entryInfo) => {

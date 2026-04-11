@@ -76,13 +76,13 @@
   .main-thankyou {
     width: 100%;
     padding: 1em;
+    flex: 3;
   }
 
   /*************** FOOTER **************/
 
   footer {
-    display: flex;
-    padding: 0;
+    flex-direction: row;
   }
 
   .footer-left,
@@ -95,6 +95,7 @@
   }
 
   .footer-middle {
+    height: 100%;
     flex: 1;
     align-items: end;
     justify-content: center;
