@@ -146,9 +146,12 @@ header span {
   background-color: var(--light-blue);
 }
 
+.hero-div {
+  position: relative;
+}
+
 .hero {
   width: 100%;
-  position: relative;
 }
 
 .hero img {
