@@ -1,0 +1,79 @@
+@media only screen and (min-width: 1000px) {
+  header {
+    display: flex;
+  }
+
+  header span {
+    flex: 4;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    flex: 2;
+    position: static;
+    top: 0;
+    right: 0;
+    background-color: var(--darker-blue);
+  }
+
+  .navigation ul {
+    flex-direction: row;
+  }
+
+  .navigation a {
+  }
+
+  .main-home {
+    margin: 0;
+  }
+
+  .hero img {
+    height: 90vh;
+  }
+
+  .ctaBtn {
+    width: 30%;
+    bottom: 20px;
+    left: 35%;
+  }
+
+  .main-home h2 {
+    margin-left: 1em;
+  }
+
+  .display-buttons {
+    margin: 1.5em;
+  }
+
+  .race-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    margin: 1em;
+  }
+
+  footer {
+    display: flex;
+    padding: 0;
+  }
+
+  .footer-left,
+  .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+
+  .footer-middle {
+    flex: 1;
+    align-items: end;
+    justify-content: center;
+  }
+}
