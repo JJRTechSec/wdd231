@@ -56,9 +56,9 @@ export const marathons = [
       "year": 2023
     },
     "female_course_record": {
-      "time": "2:16:16",
-      "athlete": "Peres Jepchirchir",
-      "year": 2024
+      "time": "2:15:25",
+      "athlete": "Paula Radcliffe",
+      "year": 2003
     },
     "became_major": "2006"
   },
