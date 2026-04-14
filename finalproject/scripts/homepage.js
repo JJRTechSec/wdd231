@@ -20,36 +20,6 @@ hamburger.addEventListener('click', function () {
 
 closeModal.addEventListener('click', () => modal.close());
 
-/*const displayMarathons = ((marathons) => {
-  marathons.forEach((marathon) => {
-    const card = document.createElement('section');
-    card.classList.add('card');
-
-    const raceName = document.createElement('h3');
-    const raceDate = document.createElement('p');
-    const maleRecord = document.createElement('p');
-    const femaleRecord = document.createElement('p');
-
-    raceName.textContent = marathon.name;
-    raceDate.innerHTML = `<strong>When</strong>: ${marathon.date_2026}`;
-    maleRecord.innerHTML = `<strong>Male Record</strong>: ${marathon.male_course_record.athlete} - ${marathon.male_course_record.time} in ${marathon.male_course_record.year}`;
-    femaleRecord.innerHTML = `<strong>Female Record</strong>: ${marathon.female_course_record.athlete} - ${marathon.female_course_record.time} in ${marathon.female_course_record.year}`;
-
-    card.appendChild(raceName)
-    card.appendChild(raceDate);
-    card.appendChild(maleRecord);
-    card.appendChild(femaleRecord);
-
-    card.addEventListener('click', () => {
-      displayModal(marathon);
-    });
-    
-    raceDisplay.appendChild(card);
-  })
-});
-
-displayMarathons(marathons);*/
-
 function displayModal(marathon) {
   modalTitle.textContent = marathon.name;
   firstHeld.innerHTML = `<strong>First Held</strong>:${marathon.first_held}`;
@@ -66,7 +36,6 @@ function displayModal(marathon) {
       if (response.ok) {
         const data = await response.json();
         displayWeather(data);
-        console.log(data);
       } else {
         throw Error(await response.text());
       }
